@@ -1,0 +1,56 @@
+[include]
+    path = ~/dotfiles/gitconfig_user
+[color]
+	status = auto
+	branch = auto
+	ui = auto
+[alias]
+	br = branch
+	ci = commit
+	cl = clone
+	co = checkout
+	di = diff
+	ls = status
+	pl = pull
+	pom = push origin master
+	pu = push
+	r = reset
+	rb = rebase
+	rl = reflog
+	st = status
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	lag = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	blog = log --graph --simplify-by-decoration --pretty=format:'%d' --all
+	url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/github\\\\.com\\\\/\\\\1/g"
+
+[push]
+	default = current
+[pull]
+	default = current
+[core]
+        ;editor = vim
+	ignorecase = true
+	;excludesfile = ~/.gitignore.global
+
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[credential]
+	helper = osxkeychain
+[hub]
+	protocol = https

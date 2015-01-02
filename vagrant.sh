@@ -1,0 +1,11 @@
+export VAGRANT_DEFAULT_PROVIDER='virtualbox'
+
+alias v='ce vagrant'
+alias vu='ce vagrant up'
+alias vp='ce vagrant provision'
+alias vr='ce vagrant reload'
+alias vs='ce vagrant suspend'
+alias vgs='ce vagrant global-status'
+alias vdf='ce vagrant destroy --force'
+alias vdst='ce vagrant destroy --force'
+alias vredo='ce vagrant destroy --force && ce vagrant up'

@@ -1,0 +1,23 @@
+.rake_test_cache
+.vagrant
+
+Berksfile.lock
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+/cookbooks
+
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+
+###
+# Ignore Chef key files and secrets
+###
+.chef/*.pem
+.chef/knife.rb
+.chef/encrypted_data_bag_secret
