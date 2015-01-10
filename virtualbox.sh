@@ -12,7 +12,3 @@ function vmpo(){
 function vmunr(){
   VBoxManage unregistervm "$@"
 }
-
-function vmdel(){
-  rm -rf "$HOME/VirtualBox\ VMs/$@"
-}
