@@ -4,5 +4,4 @@
 ~/.inputrc      ->	dotfiles/inputrc
 ~/.vimrc	->	dotvim/vimrc
 ~/.vim		->	dotvim/
-~/.vimrc	->	dotvim/vimrc
 ```
