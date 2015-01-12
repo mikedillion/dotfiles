@@ -1,6 +1,7 @@
 alias be='bundle exec'
 
 alias rr='rbenv rehash'
+source /Users/miked/.rbenv/completions/rbenv.bash
 
 #function rake {
 #  if [ -f Gemfile ]; then
