@@ -1,7 +1,5 @@
-```
-~/.bash_profile	->	dotfiles/bash_profile
-~/.gitconfig	->	dotfiles/gitconfig
-~/.inputrc      ->	dotfiles/inputrc
-~/.vimrc	->	dotvim/vimrc
-~/.vim		->	dotvim/
-```
+ln -sf ~/dotfiles/dotgemrc ~/.gemrc
+ln -sf ~/dotfiles/gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/gitignore.gloabl ~/.gitignore.global
+ln -sf ~/dotfiles/tmux-powerlinerc ~/.tmux-powerlinerc
+ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
