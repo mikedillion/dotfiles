@@ -87,6 +87,7 @@ alias grb='git rebase'
 alias grbc='git rebase --continue'
 alias grbc='git rebase --abort'
 alias grl='git reflog'
+alias gpr='hub pull-request --browse'
 
 alias ff='git status --ignored'
 alias gg='git status --ignored --short'
