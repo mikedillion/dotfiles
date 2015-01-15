@@ -1,0 +1,1 @@
+curl -q "http://10.0.1.101/say?words=%22konichiwa+bitches%26langpair=ja%26tl=ja%22&token=ffd56287c68b403c197c72cf27032724"

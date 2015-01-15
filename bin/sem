@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+REPO=$(basename `git rev-parse --show-toplevel`)
+open -a Google\ Chrome "https://semaphoreapp.com/cirrusmio/$REPO/branches/$BRANCH"

@@ -1,0 +1,16 @@
+#! /bin/bash
+
+# TODO this was hacked together in one minute so it's retarded.
+
+GIT_DIRS=`find . -type d -name ".git" | grep --color=never --only-matching '.*/'`
+
+for i in $GIT_DIRS; do
+  echo $i
+  GIT_REMOTE_ORIGIN=`git --git-dir="$i.git" --work-tree="$i" remote show origin | grep URL`
+  if [ -n "$GIT_REMOTE_ORIGIN" ]; then
+    echo "################################################################################"
+    tput setaf 1 && toilet --font smbraille --filter border $i
+    echo $GIT_REMOTE_ORIGIN
+    echo "################################################################################"
+  fi
+done

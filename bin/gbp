@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# TODO parse remotes for repo name
+# TODO do nothing if not in repo
+
+ORG=$(basename $(cd ../ && pwd))
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+REPO=$(basename `git rev-parse --show-toplevel`)
+open -a Google\ Chrome "http://pswgithub.rds.lexmark.com/$ORG/$REPO/tree/$BRANCH"

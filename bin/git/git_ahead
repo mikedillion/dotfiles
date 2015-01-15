@@ -1,0 +1,17 @@
+#! /bin/bash
+
+#@TODO: add quick options for depth and exclusion
+
+GIT_DIRS=`find . -type d -name ".git" | grep --color=never --only-matching '.*/'`
+
+for i in $GIT_DIRS; do
+  echo $i
+  SHORT_STAT=`git --git-dir="$i.git" --work-tree="$i" status | grep "ahead of"`
+  if [ -n "$SHORT_STAT" ]; then
+    echo "################################################################################"
+    tput setaf 1 && toilet --font smbraille --filter border $i
+    git --git-dir="$i.git" --work-tree="$i" status | grep "ahead of"
+    tput reset
+    echo "################################################################################"
+  fi
+done

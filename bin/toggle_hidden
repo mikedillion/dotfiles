@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ISVISIBLE=`defaults read com.apple.finder AppleShowAllFiles`
+if [ "$ISVISIBLE" == "FALSE" ]; then
+  defaults write com.apple.finder AppleShowAllFiles TRUE
+else
+  defaults write com.apple.finder AppleShowAllFiles FALSE
+fi
+
+killall Finder

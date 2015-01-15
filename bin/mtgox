@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require 'json'
+require 'net/http'
+require 'pp'
+
+def ticker
+  Net::HTTP.get('data.mtgox.com','/api/2/BTCUSD/money/ticker')
+rescue SocketError
+  'Socket error'
+end
+
+prices = JSON.parse(ticker)['data']
+%w{buy sell avg last low}.each do |type|
+  puts "#{type} => #{prices[type]['display']}"
+end

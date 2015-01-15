@@ -1,0 +1,62 @@
+#!/bin/bash -e
+# https://gist.github.com/neerolyte/9343952
+
+# vssh - significantly faster Vagrant SSHing
+# Usage: vssh [vagrant host] [regular ssh arguments]
+
+# find the .vagrant directory scanning up from $PWD
+find_vagrant_dir() {
+	cdir="$PWD"
+	while ! [[ -d "$cdir/.vagrant" ]] && [[ "$cdir" != "/" ]]; do
+		cdir="$(dirname "$cdir")"
+	done
+
+	echo "$cdir/.vagrant"
+}
+
+get_host_uuid() {
+	host="$1"
+	cat "$vagrant_dir/machines/$host/virtualbox/id"
+}
+
+cache_ssh_config() {
+	{
+		echo "ControlMaster auto"
+		echo "ControlPath $HOME/.ssh/master-%r@%h:%p"
+		echo "ControlPersist 120s"
+		vagrant ssh-config "$host"
+	} > "$ssh_config"
+}
+
+get_ssh_config_date() {
+	date +%s -r "$ssh_config"
+}
+
+get_vm_date() {
+	vm="$1"
+	uuid="$(get_host_uuid "$vm")"
+	date +%s --date="$(VBoxManage showvminfo --machinereadable "$uuid" \
+		| grep ^VMStateChangeTime \
+		| sed -r 's/.*="(.*)"/\1/g'
+	)"
+}
+
+refresh_ssh_config_cache() {
+	if ! [[ -f "$ssh_config" ]] \
+		|| [[ "$(get_vm_date "$host")" -ge "$(get_ssh_config_date)" ]]; then
+		cache_ssh_config
+	fi
+}
+
+vagrant_dir="$(find_vagrant_dir)"
+# extract host arg
+host=default
+if ! [[ -z "$1" ]] && [[ -d "$vagrant_dir"/machines/"$1" ]]; then
+	host="$1"
+	shift
+fi
+ssh_config="$vagrant_dir/ssh-config-$host"
+
+refresh_ssh_config_cache
+
+ssh -F "$ssh_config" "$host" "$@"
