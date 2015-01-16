@@ -85,9 +85,12 @@ alias gpu='git push'
 alias gr='git reset'
 alias grb='git rebase'
 alias grbc='git rebase --continue'
-alias grbc='git rebase --abort'
+alias grba='git rebase --abort'
 alias grl='git reflog'
+
+# hub specific
 alias gpr='hub pull-request --browse'
+alias gcist='hub ci-status'
 
 alias ff='git status --ignored'
 alias gg='git status --ignored --short'
