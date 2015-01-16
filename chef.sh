@@ -4,7 +4,7 @@ alias ce='chef exec'
 alias apiup='curl https://supermarket.getchef.com/api/v1/health | jsonformat'
 
 # kitchen.ci
-alias kitchen='bundle exec kitchen'
+alias kitchen='chef exec kitchen'
 alias k='kitchen'
 
 alias kcr='kitchen create'
