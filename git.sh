@@ -5,7 +5,8 @@ source $HOME/bin/git/git-completion.bash
 #export GIT_EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim -fg '
 export PATH=$PATH:$HOME/bin/git
 
-# git functions
+# functions
+################################################################################
 function g {
   if [[ $# > 0 ]]; then
     git "$@"
@@ -44,7 +45,50 @@ function git-branch-all {
   done
 }
 
+function gpr {
+  push push origin
+  hub pull-request --browse --message "$@"
+}
+
+function gco {
+  if [[ $# > 0 ]]; then
+    git checkout "$@"
+  else
+    git checkout @{-1}
+  fi
+}
+
+function gciam {
+  if [[ $# > 0 ]]; then
+    gci --all --message "$@"
+  else
+    red You just make an empty commit with:
+    git commit -a --allow-empty-message -m ''
+    git show --minimal
+  fi
+}
+
+# git ahead_behind
+# TODO make this less awful
+function ahead_behind {
+  git status &> /dev/null
+  if [ $? -eq 0 ]; then
+    curr_branch=$(git rev-parse --abbrev-ref HEAD);
+    curr_remote=$(git config branch.$curr_branch.remote);
+    curr_merge_branch=$(git config branch.$curr_branch.merge | cut -d / -f 3);
+    ab=$(git rev-list --left-right --count $curr_branch...$curr_remote/$curr_merge_branch | tr -s '\t' '|';)
+    echo -e "[$ab]"
+  fi
+}
+
+# github url shortener
+function gshrt {
+  url=$1
+  curl -si http://git.io -F "url=$url" | grep "Location" | cut -d ' ' -f 2
+}
+
 # git aliases
+################################################################################
 
 # From gitconfig:
 #  br = branch
@@ -88,10 +132,6 @@ alias grbc='git rebase --continue'
 alias grba='git rebase --abort'
 alias grl='git reflog'
 
-# hub specific
-alias gpr='hub pull-request --browse'
-alias gcist='hub ci-status'
-
 alias ff='git status --ignored'
 alias gg='git status --ignored --short'
 
@@ -104,46 +144,11 @@ alias grms='git remote -v show'
 
 alias gundl='git ls-files -d | xargs git checkout --'
 
-# functions
-
-function gco {
-  if [[ $# > 0 ]]; then
-    git checkout "$@"
-  else
-    git checkout @{-1}
-  fi
-}
-
-function gciam {
-  if [[ $# > 0 ]]; then
-    gci --all --message "$@"
-  else
-    red You just make an empty commit with:
-    git commit -a --allow-empty-message -m ''
-    git show --minimal
-  fi
-}
-
-# git ahead_behind
-# TODO make this less awful
-function ahead_behind {
-  git status &> /dev/null
-  if [ $? -eq 0 ]; then
-    curr_branch=$(git rev-parse --abbrev-ref HEAD);
-    curr_remote=$(git config branch.$curr_branch.remote);
-    curr_merge_branch=$(git config branch.$curr_branch.merge | cut -d / -f 3);
-    ab=$(git rev-list --left-right --count $curr_branch...$curr_remote/$curr_merge_branch | tr -s '\t' '|';)
-    echo -e "[$ab]"
-  fi
-}
-
-# github url shortener
-function gshrt {
-  url=$1
-  curl -si http://git.io -F "url=$url" | grep "Location" | cut -d ' ' -f 2
-}
+# hub specific
+alias gcist='hub ci-status'
 
 # quickly open those things you're working
+################################################################################
 alias gst='git diff --staged --name-only' # list of files staged
 alias vgst='vi -O $(gst)'
 
