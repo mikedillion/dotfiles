@@ -1,0 +1,23 @@
+# ganked from https://github.com/blacRose/home/blob/master/.somafm
+
+export MEDIA_PLAYER=mplayer
+alias soma.beatBlender="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:8384 >| .nowplaying"
+alias soma.bootLiquor="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:7000 >| .nowplaying"
+alias soma.blackRock="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:8040 >| .nowplaying"
+alias soma.cliqHop="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:8062 >| .nowplaying"
+alias soma.covers="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:8700 >| .nowplaying"
+alias soma.digitalis="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:8900 >| .nowplaying"
+alias soma.doomed="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:8300 >| .nowplaying"
+alias soma.droneZone="$MEDIA_PLAYER -quiet http://ice.somafm.com/dronezone >| .nowplaying"
+alias soma.grooveSalad="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:3000 >| .nowplaying"
+alias soma.illinoisStreet="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:8504 >| .nowplaying"
+alias soma.indiePop="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:8070 >| .nowplaying"
+alias soma.lush="$MEDIA_PLAYER -quiet http://ice.somafm.com/lush >| .nowplaying"
+alias soma.missionControl="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:2020 >| .nowplaying"
+alias soma.popTron="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:2200 >| .nowplaying"
+alias soma.secretAgent="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:9010 >| .nowplaying"
+alias soma.sonicUniverse="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:8600 >| .nowplaying"
+alias soma.spaceStation="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:8200 >| .nowplaying"
+alias soma.suburbsOfGoa="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:8850 >| .nowplaying"
+alias soma.tagsTrip="$MEDIA_PLAYER -quiet http://205.188.215.230:8012 >| .nowplaying"
+alias soma.underground80s="$MEDIA_PLAYER -quiet http://voxsc1.somafm.com:8880 >| .nowplaying"
