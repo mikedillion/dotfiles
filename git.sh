@@ -46,7 +46,7 @@ function git-branch-all {
 }
 
 function gpr {
-  push push origin
+  git push origin
   hub pull-request --browse --message "$@"
 }
 
@@ -60,7 +60,7 @@ function gco {
 
 function gciam {
   if [[ $# > 0 ]]; then
-    gci --all --message "$@"
+    git commit --all --message "$@"
   else
     red You just make an empty commit with:
     git commit -a --allow-empty-message -m ''
