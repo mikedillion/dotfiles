@@ -4,7 +4,7 @@ for folder in *; do
   if [ -d "$folder/.git/" ]; then
     cd $folder
     BRANCH=$(git rev-parse --abbrev-ref HEAD)
-    echo ///// $folder ///// $BRANCH
+    echo ///// $BRANCH ///// $folder
     git pull | grep -q -v 'Already up-to-date.' && changed=1
     cd ../
   fi
