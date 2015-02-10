@@ -185,6 +185,5 @@ function 1done {
   local current_branch=$(git symbolic-ref --short HEAD)
   git commit --all --message "$CURRENT_FEATURE"
   git push origin $current_branch
-  #hub pull-request --browse --message "$CURRENT_FEATURE"
-  hub pull-request --message "$CURRENT_FEATURE"
+  hub pull-request --browse --message "$CURRENT_FEATURE"
 }
