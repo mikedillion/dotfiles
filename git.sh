@@ -169,3 +169,22 @@ alias git_start='git init . && git add . && git commit --all --message "Initial 
 
 git_commit_diff='git log --left-right --graph --cherry-pick --oneline master..'
 alias gcd='git_commit_diff'
+
+# Experimental
+################################################################################
+
+alias snake_case="tr -cd '[[:alnum:]] ' | tr '[:upper:]' '[:lower:]' | tr ' ' '_' | tr -s '\n'"
+
+function 1off {
+  export CURRENT_FEATURE="$@"
+  echo "Starting work on '$CURRENT_FEATURE'"
+  git checkout -b $(echo $CURRENT_FEATURE | snake_case)
+}
+
+function 1done {
+  local current_branch=$(git symbolic-ref --short HEAD)
+  git commit --all --message "$CURRENT_FEATURE"
+  git push origin $current_branch
+  #hub pull-request --browse --message "$CURRENT_FEATURE"
+  hub pull-request --message "$CURRENT_FEATURE"
+}
