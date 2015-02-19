@@ -1,5 +1,7 @@
 function vms(){
+  echo "Running:"
   VBoxManage list runningvms
+  echo "ALL VMs:"
   VBoxManage list vms;
 }
 

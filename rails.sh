@@ -14,5 +14,3 @@ function rails_start() {
   git commit --all --message "Initial commit"
   popd $1
 }
-
-alias whatev='\rails new whatever'

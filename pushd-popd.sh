@@ -25,6 +25,5 @@ popd() {
 }
 
 alias cd='pushd'
-alias dc='pushd' # fat fingers. Ignore /usr/bin/dc
 alias back='popd'
 alias flip='pushd_builtin'
