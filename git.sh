@@ -123,8 +123,8 @@ alias gdis='git diff --staged'
 alias gdit='git difftool'
 alias gdits='git difftool --staged'
 alias gp='git pull'
-alias gpo='git push origin'
-alias gpogb='git push origin && git browse'
+alias gpo='git push -u origin'
+alias gpogb='git push -u origin && git browse'
 alias gpu='git push'
 alias gr='git reset'
 alias grb='git rebase'
@@ -184,6 +184,7 @@ function 1off {
 function 1done {
   local current_branch=$(git symbolic-ref --short HEAD)
   git commit --all --message "$CURRENT_FEATURE"
-  git push origin $current_branch
+  git push -u origin $current_branch
+  #git branch --set-upstream-to=origin/$current_branch $current_branch
   hub pull-request --browse --message "$CURRENT_FEATURE"
 }
