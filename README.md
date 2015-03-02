@@ -1,3 +1,5 @@
+ln -sf ~/dotfiles/bin ~/bin
+ln -sf ~/dotfiles/inputrc ~/.inputrc
 ln -sf ~/dotfiles/dotgemrc ~/.gemrc
 ln -sf ~/dotfiles/gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/gitignore.gloabl ~/.gitignore.global
