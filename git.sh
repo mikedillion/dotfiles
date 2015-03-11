@@ -146,6 +146,8 @@ alias grms='git remote -v show'
 
 alias gundl='git ls-files -d | xargs git checkout --'
 
+alias grrr='git reset HEAD --hard'
+
 # hub specific
 alias gcist='hub ci-status'
 
