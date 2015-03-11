@@ -4,14 +4,14 @@
 
 GIT_DIRS=`find . -type d -name ".git" | grep --color=never --only-matching '.*/'`
 
-for i in $GIT_DIRS; do
-  SHORT_STAT=`git --git-dir="$i.git" --work-tree="$i" status --short --ignored`
-  CURRENT_BRANCH=`git --git-dir="$i.git" --work-tree="$i" branch | grep '*'`
-  echo "$CURRENT_BRANCH /////// $i"
+for folder in $GIT_DIRS; do
+  SHORT_STAT=$(git --git-dir="$folder.git" --work-tree="$folder" status --short --ignored)
+  CURRENT_BRANCH=$(git --git-dir="$folder.git" --work-tree="$folder" rev-parse --abbrev-ref HEAD)
+  echo "$CURRENT_BRANCH /////// $folder"
   if [ -n "$SHORT_STAT" ]; then
     echo "################################################################################"
-    tput setaf 1 && toilet --font smbraille --filter border $i
-    echo $SHORT_STAT
+    tput setaf 1 && toilet --font smbraille --filter border $folder && tput reset
+    echo "$SHORT_STAT"
     echo "################################################################################"
   fi
 done

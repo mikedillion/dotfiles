@@ -3,9 +3,10 @@
 for folder in *; do
   if [ -d "$folder/.git/" ]; then
     cd $folder
-    BRANCH=$(git rev-parse --abbrev-ref HEAD)
-    echo ///// $BRANCH ///// $folder
-    git pull | grep -q -v 'Already up-to-date.' && changed=1
+    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    echo ///// $CURRENT_BRANCH ///// $folder
+    # git-pull must be run inside a work tree
+    git pull | grep -q -v 'Already up-to-date.'
     cd ../
   fi
 done
