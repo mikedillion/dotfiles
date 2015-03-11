@@ -5,13 +5,13 @@
 GIT_DIRS=`find . -type d -name ".git" | grep --color=never --only-matching '.*/'`
 
 for i in $GIT_DIRS; do
-  SHORT_STAT=`git --git-dir="$i.git" --work-tree="$i" status --short`
+  SHORT_STAT=`git --git-dir="$i.git" --work-tree="$i" status --short --ignored`
   CURRENT_BRANCH=`git --git-dir="$i.git" --work-tree="$i" branch | grep '*'`
   echo "$CURRENT_BRANCH /////// $i"
   if [ -n "$SHORT_STAT" ]; then
     echo "################################################################################"
     tput setaf 1 && toilet --font smbraille --filter border $i
-    git --git-dir="$i.git" --work-tree="$i" status --short --ignored
+    echo $SHORT_STAT
     echo "################################################################################"
   fi
 done
