@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for folder in *; do
+  if [ -d "$folder/.git/" ]; then
+    cd $folder
+    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    echo ///// $CURRENT_BRANCH ///// $folder
+    git clean --force -dx
+    git reset HEAD --hard
+    # git-pull must be run inside a work tree
+    git pull | grep -q -v 'Already up-to-date.'
+    cd ../
+  fi
+done
