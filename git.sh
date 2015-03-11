@@ -68,6 +68,11 @@ function gciam {
   fi
 }
 
+function git_reset_and_clean {
+  git clean --force -dx
+  git reset HEAD --hard
+}
+
 # git ahead_behind
 # TODO make this less awful
 function ahead_behind {
