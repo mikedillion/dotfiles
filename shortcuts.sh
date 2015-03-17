@@ -109,16 +109,4 @@ function findf {
 
 alias telnet_nyan='telnet nyancat.dakko.us'
 
-# SSH aliases
-function ssh-per() {
-  ssh -F $HOME/.ssh/config.personal $@
-}
-
-function ssh-psft(){
-  ssh -F $HOME/.ssh/config.psft $@
-}
-
-function ssh-cm {
-  ssh -F $HOME/.ssh/config.cirrusmio $@
-}
-
+alias serve='rpython -m SimpleHTTPServer'
