@@ -109,4 +109,4 @@ function findf {
 
 alias telnet_nyan='telnet nyancat.dakko.us'
 
-alias serve='rpython -m SimpleHTTPServer'
+alias serve='python -m SimpleHTTPServer'
