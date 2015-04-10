@@ -32,7 +32,7 @@
 [pull]
 	default = current
 [core]
-        ;editor = vim
+        editor = vim
 	ignorecase = true
 	compression = 0
 	;excludesfile = ~/.gitignore.global
@@ -51,6 +51,7 @@
 	prompt = false
 [merge]
 	tool = Kaleidoscope
+
 [filter "media"]
 	required = true
 	clean = git media clean %f

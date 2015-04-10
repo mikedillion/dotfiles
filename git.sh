@@ -92,6 +92,14 @@ function gshrt {
   curl -si http://git.io -F "url=$url" | grep "Location" | cut -d ' ' -f 2
 }
 
+function gdin {
+  if [[ $# > 0 ]]; then
+    git diff --name-only git "$@"
+  else
+    git diff --name-only master..
+  fi
+}
+
 # git aliases
 ################################################################################
 
@@ -123,7 +131,6 @@ alias gcim='git commit --message'
 alias gcl='git clone'
 alias gcb='git checkout -b $(basename $PWD)'
 alias gdi='git diff'
-alias gdin='git diff --name-only'
 alias gdis='git diff --staged'
 alias gdit='git difftool'
 alias gdits='git difftool --staged'
@@ -138,6 +145,8 @@ alias grbim='git rebase --interactive master'
 alias grbc='git rebase --continue'
 alias grba='git rebase --abort'
 alias grl='git reflog'
+alias gs='git stash'
+alias gsp='git stash pop'
 
 alias ff='git status --ignored'
 alias gg='git status --ignored --short'
@@ -152,6 +161,7 @@ alias grms='git remote -v show'
 alias gundl='git ls-files -d | xargs git checkout --'
 
 alias grrr='git reset HEAD --hard'
+alias gcrrr='git clean -dfx && git reset HEAD --hard'
 
 # hub specific
 alias gcist='hub ci-status'
