@@ -94,7 +94,7 @@ function gshrt {
 
 function gdin {
   if [[ $# > 0 ]]; then
-    git diff --name-only git "$@"
+    git diff --name-only "$@"
   else
     git diff --name-only master..
   fi
