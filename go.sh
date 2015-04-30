@@ -1,5 +1,4 @@
-#export GOPATH=$HOME/.golib
-#export GOBIN=$GOPATH/bin
-#export PATH=$PATH:$GOBIN
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOROOT/bin
 
-[[ -s "/Users/miked/.gvm/scripts/gvm" ]] && source "/Users/miked/.gvm/scripts/gvm"
+#[[ -s "/Users/miked/.gvm/scripts/gvm" ]] && source "/Users/miked/.gvm/scripts/gvm"

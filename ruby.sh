@@ -29,3 +29,8 @@ alias rc='rubocop'
 alias rct='rubocop --only Style/Tab'
 
 alias jekyll='bundle exec jekyll'
+
+hitch() {
+  command hitch "$@"
+  if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
+}
