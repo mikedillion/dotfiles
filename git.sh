@@ -100,6 +100,14 @@ function gdin {
   fi
 }
 
+function gdit {
+  if [[ $# > 0 ]]; then
+    git difftool "$@"
+  else
+    git difftool master..
+  fi
+}
+
 # git aliases
 ################################################################################
 
@@ -132,7 +140,6 @@ alias gcl='git clone'
 alias gcb='git checkout -b $(basename $PWD)'
 alias gdi='git diff'
 alias gdis='git diff --staged'
-alias gdit='git difftool'
 alias gdits='git difftool --staged'
 alias gp='git pull'
 alias gpo='git push -u origin'
@@ -191,6 +198,7 @@ alias gcd='git_commit_diff'
 ################################################################################
 
 alias snake_case="tr -cd '[[:alnum:]] ' | tr '[:upper:]' '[:lower:]' | tr ' ' '_' | tr -s '\n'"
+alias snake_paste="pbpaste | snake_case"
 
 function 1off {
   export CURRENT_FEATURE="$@"

@@ -35,7 +35,7 @@
         editor = vim
 	ignorecase = true
 	compression = 0
-	;excludesfile = ~/.gitignore.global
+	excludesfile = ~/.gitignore.global
 
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"

@@ -5,3 +5,6 @@ ln -sf ~/dotfiles/gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/gitignore.gloabl ~/.gitignore.global
 ln -sf ~/dotfiles/tmux-powerlinerc ~/.tmux-powerlinerc
 ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
+ln -sf ~/dotfiles/irbrc ~/.irbrc
+ln -sf ~/dotfiles/npmrc ~/.npmrc
+ln -sf ~/dotfiles/octaverc ~/.octaverc

@@ -3,3 +3,7 @@
 
 # vi swap file
 *.swp
+
+# ctags
+tags
+gems.tags

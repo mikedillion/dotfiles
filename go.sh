@@ -1,4 +1,4 @@
-export GOROOT=$HOME/go
-export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 #[[ -s "/Users/miked/.gvm/scripts/gvm" ]] && source "/Users/miked/.gvm/scripts/gvm"
