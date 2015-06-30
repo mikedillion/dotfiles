@@ -58,6 +58,14 @@ function gco {
   fi
 }
 
+function gcob {
+  if [[ $# > 0 ]]; then
+    git checkout -b "$@"
+  else
+    git checkout -b $(snake_paste)
+  fi
+}
+
 function gciam {
   if [[ $# > 0 ]]; then
     git commit --all --message "$@"

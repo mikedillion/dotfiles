@@ -1,3 +1,9 @@
+function dump {
+  pbpaste >| "$@"
+}
+
+alias meh="echo '¯\_(ツ)_/¯' | tee >(pbcopy)"
+
 # color
 NORMAL=$(tput sgr0)
 GREEN=$(tput setaf 2; tput bold)
@@ -31,3 +37,12 @@ function toil4() { tput setaf 2 && tput setab 6 && toilet --font=future "$@" ;}
 function toil4() { tput setaf 2 && tput setab 6 && toilet --font=future "$@" ;}
 function toil5() { tput setaf 1 && tput setab 6 && toilet --font=future "$@" ;}
 
+function historyy {
+  if [[ $# > 0 ]]; then
+    history | cut -c 8- | sort | uniq
+  else
+    history | cut -c 8- | sort | uniq | grep -i "$@"
+  fi
+}
+
+alias aliass='alias | grep -i "$@"'
