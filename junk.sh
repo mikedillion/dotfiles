@@ -39,9 +39,9 @@ function toil5() { tput setaf 1 && tput setab 6 && toilet --font=future "$@" ;}
 
 function historyy {
   if [[ $# > 0 ]]; then
-    history | cut -c 8- | sort | uniq
-  else
     history | cut -c 8- | sort | uniq | grep -i "$@"
+  else
+    history | cut -c 8- | sort | uniq
   fi
 }
 
