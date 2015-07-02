@@ -63,3 +63,7 @@
 [color "grep"]
 	linenumber = blue
 	filename = green bold
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
