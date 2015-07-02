@@ -96,8 +96,11 @@ function ahead_behind {
 
 # github url shortener
 function gshrt {
-  url=$1
-  curl -si http://git.io -F "url=$url" | grep "Location" | cut -d ' ' -f 2
+  if [[ $# > 0 ]]; then
+    curl -si http://git.io -F "url=$@" | grep "Location" | cut -d ' ' -f 2
+  else
+    curl -si http://git.io -F "url=$(pbpaste)" | grep "Location" | cut -d ' ' -f 2
+  fi
 }
 
 function gdin {
