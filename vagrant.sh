@@ -11,3 +11,15 @@ alias vdf='chef exec vagrant destroy --force'
 alias vdst='chef exec vagrant destroy --force'
 alias vredo='chef exec vagrant destroy --force && chef exec vagrant up'
 alias vagdel='rm -rf ~/.vagrant.d/data/machine-index/index*'
+
+#  app.vm.provision 'shell' do |s|
+#    s.privileged = false
+#    s.inline = <<-CMD
+#      source $HOME/dotfiles/README.md &&
+#      source $HOME/dotfiles_private/README.md &&
+#      source $HOME/dotvim/INSTALL
+#    CMD
+#  end
+#  app.vm.synced_folder '/Users/miked/dotfiles', '/home/vagrant/dotfiles'
+#  app.vm.synced_folder '/Users/miked/dotfiles_private', '/home/vagrant/dotfiles_private'
+#  app.vm.synced_folder '/Users/miked/dotvim', '/home/vagrant/dotvim'

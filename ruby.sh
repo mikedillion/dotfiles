@@ -1,13 +1,15 @@
 # rbenv stuff, obvi
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
-alias rr='rbenv rehash'
-source $HOME/.rbenv/completions/rbenv.bash
+type rbenv &> /dev/null
+if [ $? -eq 0 ]; then
+  eval "$(rbenv init -)"
+  source $HOME/.rbenv/completions/rbenv.bash
+  alias rr='rbenv rehash'
+fi
 
 alias be='bundle exec'
 alias fs='foreman start'
-
 
 #function rake {
 #  if [ -f Gemfile ]; then
