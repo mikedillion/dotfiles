@@ -20,6 +20,7 @@
 	rb = rebase
 	rl = reflog
 	st = status
+	lf = log --format=fuller
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	lag = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	blog = log --graph --simplify-by-decoration --pretty=format:'%d' --all
