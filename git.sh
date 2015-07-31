@@ -219,7 +219,7 @@ function 1off {
 
 function 1done {
   local current_branch=$(git symbolic-ref --short HEAD)
-  git commit --all --message "$CURRENT_FEATURE"
+  git commit --message "$CURRENT_FEATURE"
   git push -u origin $current_branch
   #git branch --set-upstream-to=origin/$current_branch $current_branch
   hub pull-request --browse --message "$CURRENT_FEATURE"
