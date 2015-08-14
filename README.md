@@ -8,3 +8,4 @@ ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/irbrc ~/.irbrc
 ln -sf ~/dotfiles/npmrc ~/.npmrc
 ln -sf ~/dotfiles/octaverc ~/.octaverc
+ln -sf ~/dotfiles/virtualenvs ~/.virtualenvs

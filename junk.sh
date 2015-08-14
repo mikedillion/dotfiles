@@ -46,3 +46,5 @@ function historyy {
 }
 
 alias aliass='alias | grep -i "$@"'
+
+alias here='basename $(pwd)'
