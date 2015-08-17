@@ -1,6 +1,6 @@
 if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
   source /usr/local/bin/virtualenvwrapper.sh
-  export WORKON_HOME="~/.python_envs"
+  export WORKON_HOME="$HOME/.python_envs"
 fi
 
 alias de='deactivate'
