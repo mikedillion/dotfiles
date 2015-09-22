@@ -14,7 +14,7 @@ alias tmk="tmux kill-session -t"
 
 function tmns {
   if [[ $# -eq 1 ]]; then
-    TMUX= tmux new-session -s "$0"
+    TMUX= tmux new-session -s "$1"
   elif [[ $# -eq 2 ]]; then
     TMUX= tmux new-session -s "$1" -c "$2"
   else
