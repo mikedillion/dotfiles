@@ -1,12 +1,15 @@
 # rbenv stuff, obvi
-export PATH="$HOME/.rbenv/bin:$PATH"
+export RBENV_ROOT="$HOME/.rbenv/"
+export PATH="${RBENV_ROOT}/bin:$PATH"
 
-type rbenv &> /dev/null
-if [ $? -eq 0 ]; then
+#type rbenv &> /dev/null
+#if [ $? -eq 0 ]; then
   eval "$(rbenv init -)"
   source $HOME/.rbenv/completions/rbenv.bash
   alias rr='rbenv rehash'
-fi
+#fi
+
+export PATH="/Users/miked/.gem/ruby/2.2.0/bin:$PATH"
 
 alias be='bundle exec'
 alias fs='foreman start'

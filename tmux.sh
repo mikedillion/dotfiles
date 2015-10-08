@@ -12,12 +12,25 @@ alias tma="tmux attach -t"
 alias tms="tmux switch -t"
 alias tmk="tmux kill-session -t"
 
-function tmns {
+function tmns() {
+  local here=$(basename $(pwd) | snake_case)
   if [[ $# -eq 1 ]]; then
     TMUX= tmux new-session -s "$1"
   elif [[ $# -eq 2 ]]; then
     TMUX= tmux new-session -s "$1" -c "$2"
   else
-    TMUX= tmux new-session
+    TMUX= tmux new-session -s "$here"
   fi
 }
+
+# Autocomplete tmux sessions
+# http://www.nathankowald.com/blog/2014/03/tmux-attach-session-alias/
+_tmux_sessions() {
+    TMUX_SESSIONS=$(tmux ls -F '#S' | xargs)
+
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(compgen -W "$TMUX_SESSIONS" -- $cur) )
+}
+
+complete -F _tmux_sessions tma
+complete -F _tmux_sessions tms

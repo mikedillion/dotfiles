@@ -60,7 +60,7 @@ function gco {
 
 function gcob {
   if [[ $# > 0 ]]; then
-    git checkout -b "$@"
+    git checkout -b $(echo "$@" | snake_case)
   else
     git checkout -b $(snake_paste)
   fi
@@ -117,6 +117,12 @@ function gdit {
   else
     git difftool master..
   fi
+}
+
+function gtag() {
+  local tag=$(echo "$@" |snake_case)
+  if [ -z "$tag" ]; then return 1; fi
+  git tag -a $tag -m $tag
 }
 
 # git aliases
@@ -207,9 +213,6 @@ alias gcd='git_commit_diff'
 
 # Experimental
 ################################################################################
-
-alias snake_case="tr -cd '[[:alnum:]] ' | tr '[:upper:]' '[:lower:]' | tr ' ' '_' | tr -s '\n'"
-alias snake_paste="pbpaste | snake_case"
 
 function 1off {
   export CURRENT_FEATURE="$@"

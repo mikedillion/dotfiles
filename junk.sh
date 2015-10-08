@@ -53,3 +53,11 @@ alias here='basename $(pwd)'
 function ak() {
   awk "{print \$$@}"
 }
+
+# Rainbows
+# yes "$(seq 232 255;seq 254 -1 233)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .01; don]"
+alias rainbow='yes "$(seq 1 255)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .01; done'
+
+# Serpent stuff
+alias snake_case="tr -c '[[:alnum:]] ' '_' | tr ' ' '_' | tr -s '\n'"
+alias snake_paste="pbpaste | snake_case"

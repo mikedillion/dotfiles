@@ -1,0 +1,6 @@
+#!/bin/bash
+
+LINES=$(wc -l < $@)
+RANDLINE=$[ $RANDOM % $LINES ]
+
+tail -n $RANDLINE  < $@ | head -1
