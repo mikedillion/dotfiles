@@ -46,6 +46,7 @@ function historyy {
 }
 
 alias aliass='alias | grep -i "$@"'
+alias funcf='typeset -F | grep -i "$@"'
 
 alias here='basename $(pwd)'
 
@@ -59,5 +60,6 @@ function ak() {
 alias rainbow='yes "$(seq 1 255)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .01; done'
 
 # Serpent stuff
-alias snake_case="tr -c '[[:alnum:]] ' '_' | tr ' ' '_' | tr -s '\n'"
+#alias snake_case="tr -c '[[:alnum:]] ' '_' | tr ' ' '_' | tr -s '\n'"
+alias snake_case="tr -cd '[[:alnum:]] ' | tr '[:upper:]' '[:lower:]' | tr ' ' '_' | tr -s '\n'"
 alias snake_paste="pbpaste | snake_case"
