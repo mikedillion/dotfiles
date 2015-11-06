@@ -3,6 +3,7 @@ function dump {
 }
 
 alias meh="echo '¯\_(ツ)_/¯' | tee >(pbcopy)"
+alias flipout="echo '(╯°□°）╯︵ ┻━┻' | tee >(pbcopy)"
 
 # color
 NORMAL=$(tput sgr0)
@@ -63,3 +64,13 @@ alias rainbow='yes "$(seq 1 255)" | while read i; do printf "\x1b[48;5;${i}m\n";
 #alias snake_case="tr -c '[[:alnum:]] ' '_' | tr ' ' '_' | tr -s '\n'"
 alias snake_case="tr -cd '[[:alnum:]] ' | tr '[:upper:]' '[:lower:]' | tr ' ' '_' | tr -s '\n'"
 alias snake_paste="pbpaste | snake_case"
+
+# https://gist.github.com/kenkeiter/65be229609f4dc0d92cc
+# https://gist.github.com/beng/806b8420cc16bcf8a07a
+selfie(){
+  SELFIE_ARCHIVE_PATH="$HOME/selfie"
+  mkdir -p $SELFIE_ARCHIVE_PATH
+  local filepath="$SELFIE_ARCHIVE_PATH/$(date +%y%m%d%H%M%S).png"
+  imagesnap $filepath -w 1.0 # the -w flag gives the camera time to warm up
+  impbcopy $filepath
+}
