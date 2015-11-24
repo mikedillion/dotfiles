@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# this is so shitty i'm so sorry
+# VERSION=0.0.0.0.0.0.0.1
+
+url=$(git remote --verbose show | grep fetch | awk '{split($0,out," "); print out[2]}' )
+url=${url#git@}
+url=${url%.git}
+url=${url/:/\/}
+
+branch=$(git branch | grep '*' | cut -d ' ' -f 2)
+
+# open "http://$url/blob/master/FILENAME"
+open "http://$url/tree/$branch"

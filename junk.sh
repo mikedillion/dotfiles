@@ -47,7 +47,7 @@ function historyy {
 }
 
 alias aliass='alias | grep -i "$@"'
-alias funcf='typeset -F | grep -i "$@"'
+alias funcf='typeset -F | grep -C 10 -i "$@"'
 
 alias here='basename $(pwd)'
 

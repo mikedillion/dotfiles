@@ -62,8 +62,8 @@ function mvvenv() {
   fi
 
   if [ -z $current_env ]; then
-    # copying puts you in the desitination env, undesireable if not starting
-    # from the source
+    # copying puts you in the desitination env which is
+    # undesireable if you're not currently in the source env
     deactivate
   fi
 }

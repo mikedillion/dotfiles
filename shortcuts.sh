@@ -8,8 +8,6 @@ alias ls='ls -1'
 alias fact="elinks -dump randomfunfacts.com | sed -n '/^| /p' | tr -d \|"
 alias ssh_ls='sudo lsof -i -n | egrep "\<ssh\>"'
 alias aa='ack -i -A 10 -B 10'
-alias sc='ssh-config'
-alias sch='sc dump | grep --color=never ^H'
 
 # fat fingers
 alias cd..='cd ..'

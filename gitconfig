@@ -33,7 +33,7 @@
 [pull]
 	default = current
 [core]
-        editor = vim
+  editor = vim
 	ignorecase = true
 	compression = 0
 	excludesfile = ~/.gitignore.global

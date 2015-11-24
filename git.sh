@@ -227,3 +227,5 @@ function 1done {
   #git branch --set-upstream-to=origin/$current_branch $current_branch
   hub pull-request --browse --message "$CURRENT_FEATURE"
 }
+
+alias glb="gitlab_browse"
