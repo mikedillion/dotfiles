@@ -32,9 +32,13 @@ alias lsvirtualenv="lsvirtualenv -b"
 #}
 
 function mkvenv() {
-  local current_dir=$(basename $(pwd))
-  mkvirtualenv $current_dir
-  workon $current_dir
+  if [ $# -eq 0 ]; then
+    env_name=$(basename $(pwd))
+  else
+    env_name=$1
+  fi
+  mkvirtualenv $env_name
+  workon $env_name
 }
 
 function mvvenv() {
