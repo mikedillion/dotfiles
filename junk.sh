@@ -68,9 +68,11 @@ alias snake_paste="pbpaste | snake_case"
 # https://gist.github.com/kenkeiter/65be229609f4dc0d92cc
 # https://gist.github.com/beng/806b8420cc16bcf8a07a
 selfie(){
-  SELFIE_ARCHIVE_PATH="$HOME/selfie"
-  mkdir -p $SELFIE_ARCHIVE_PATH
-  local filepath="$SELFIE_ARCHIVE_PATH/$(date +%y%m%d%H%M%S).png"
+  local selfie_archive_path="$HOME/selfie"
+  local filepath="$selfie_archive_path/$(date +%y%m%d%H%M%S).png"
+
+  mkdir -p $selfie_archive_path
   imagesnap $filepath -w 1.0 # the -w flag gives the camera time to warm up
-  impbcopy $filepath
+  # impbcopy $filepath
+  imguru -d $filepath 2>&1 | pbcopy
 }

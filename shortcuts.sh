@@ -109,3 +109,5 @@ function findf {
 alias telnet_nyan='telnet nyancat.dakko.us'
 
 alias serve='python -m SimpleHTTPServer'
+
+alias mou="open $HOME/Applications/Mou.app"
