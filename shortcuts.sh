@@ -110,4 +110,6 @@ alias telnet_nyan='telnet nyancat.dakko.us'
 
 alias serve='python -m SimpleHTTPServer'
 
-alias mou="open $HOME/Applications/Mou.app"
+alias mou='open -a $HOME/Applications/Mou.app "$@"'
+
+alias oof='open -a /opt/homebrew-cask/Caskroom/openoffice/4.1.1/OpenOffice.app/ "$@"'

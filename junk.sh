@@ -69,10 +69,13 @@ alias snake_paste="pbpaste | snake_case"
 # https://gist.github.com/beng/806b8420cc16bcf8a07a
 selfie(){
   local selfie_archive_path="$HOME/selfie"
-  local filepath="$selfie_archive_path/$(date +%y%m%d%H%M%S).png"
+  local datestamp=$(date +%y%m%d%H%M%S)
+  local filepath="$selfie_archive_path/$datestamp.png"
 
-  mkdir -p $selfie_archive_path
-  imagesnap $filepath -w 1.0 # the -w flag gives the camera time to warm up
-  # impbcopy $filepath
-  imguru -d $filepath 2>&1 | pbcopy
+  mkdir -p $selfie_archive_path   # make the selfie folder if it doesn't exist
+  imagesnap $filepath -w 1.0      # the -w flag gives the camera time to warm up
+  # impbcopy $filepath            # copy the data for the image to the clipboard
+  local link=$(imguru -d $filepath 2>&1) # upload to Imgur
+  echo $link | tee >(pbcopy)      # display the link and copy it to clipboard
+  echo "$datestamp,$filepath,$link" >> $selfie_archive_path/LOGFILE
 }
