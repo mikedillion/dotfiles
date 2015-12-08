@@ -33,7 +33,12 @@ alias lsvirtualenv="lsvirtualenv -b"
 
 function mkvenv() {
   if [ $# -eq 0 ]; then
-    env_name=$(basename $(pwd))
+    # if [ -v TMUX ]; then # for bash > 4.2
+    if [ -n "${TMUX+1}" ]; then
+      env_name=$(tmux display-message -p '#S')
+    else
+      env_name=$(basename $(pwd))
+    fi
   else
     env_name=$1
   fi
