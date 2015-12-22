@@ -21,13 +21,12 @@ alias de="deactivate"
 
 alias lsvirtualenv="lsvirtualenv -b"
 
-# TODO: Fix this later
 #function workon() {
 #  if [[ $# > 0 ]]; then
 #    workon "$@"
 #  else
 #    local session=$(tmux display-message -p '#S')
-#    echo "$session" | workon
+#    workon "$session"
 #  fi
 #}
 
