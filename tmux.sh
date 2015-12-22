@@ -8,7 +8,15 @@ source $HOME/bin/tmuxinator_completion
 #complete -W "$(teamocil --list)" teamocil
 alias tm="tmux"
 alias tmls="tmux list-sessions"
-alias tma="tmux attach -t"
+
+function tma() {
+  if [[ $# > 0 ]]; then
+    tmux attach -t "$@"
+  else
+    tmux attach
+  fi
+}
+
 alias tms="tmux switch -t"
 alias tmk="tmux kill-session -t"
 
