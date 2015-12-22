@@ -32,6 +32,7 @@ function j {
         jobs
     fi
 }
+
 alias j1='j 1'
 alias j2='j 2'
 alias j3='j 3'
