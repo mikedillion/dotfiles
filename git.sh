@@ -15,6 +15,12 @@ function g {
   fi
 }
 
+function git_start(){
+  git init .
+  echo -e "# OS X folder attributes\n.DS_Store\n\n# vi swap file\n*.swp" >| .gitignore
+  git add . && git commit --all --message "Initial commit";
+}
+
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo -e "\033[0;31m+\033[0m"
 }
@@ -205,8 +211,6 @@ alias gum='git ls-files --unmerged | awk "{print \$4}" | uniq' # list of unmerge
 alias vgum='vi -O $(gum)'
 
 alias git_contrib='git shortlog -s -n'
-
-alias git_start='git init . && git add . && git commit --all --message "Initial commit"'
 
 git_commit_diff='git log --left-right --graph --cherry-pick --oneline master..'
 alias gcd='git_commit_diff'
