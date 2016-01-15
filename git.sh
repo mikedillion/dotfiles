@@ -15,6 +15,14 @@ function g {
   fi
 }
 
+function ga {
+  if [[ $# > 0 ]]; then
+    git add "$@"
+  else
+    git add .
+  fi
+}
+
 function git_start(){
   git init .
   echo -e "# OS X folder attributes\n.DS_Store\n\n# vi swap file\n*.swp" >| .gitignore
@@ -150,7 +158,6 @@ function gtag() {
 #  st = status
 #
 alias git='hub'
-alias ga='git add'
 alias gap='git add --patch'
 alias gapg='git add --patch `gus`'
 alias gb='git browse'
