@@ -9,6 +9,8 @@ export PATH="${RBENV_ROOT}/bin:$PATH"
   alias rr='rbenv rehash'
 #fi
 
+export PATH="/Users/miked/.gem/ruby/2.2.0/bin:$PATH"
+
 alias be='bundle exec'
 alias fs='foreman start'
 
