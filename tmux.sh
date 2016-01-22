@@ -11,7 +11,7 @@ alias tmls="tmux list-sessions"
 
 function tma() {
   if [[ $# > 0 ]]; then
-    tmux attach -t "$@"
+    TMUX= tmux attach -t "$@"
   else
     tmux attach
   fi
