@@ -113,4 +113,5 @@ alias serve='python -m SimpleHTTPServer'
 
 alias mou='open -a $HOME/Applications/Mou.app "$@"'
 
+# Uh, you'll have to make this 'latest' symlink yourself.
 alias oof='open -a /opt/homebrew-cask/Caskroom/openoffice/latest/OpenOffice.app/ "$@"'
