@@ -113,4 +113,4 @@ alias serve='python -m SimpleHTTPServer'
 
 alias mou='open -a $HOME/Applications/Mou.app "$@"'
 
-alias oof='open -a /opt/homebrew-cask/Caskroom/openoffice/4.1.1/OpenOffice.app/ "$@"'
+alias oof='open -a /opt/homebrew-cask/Caskroom/openoffice/latest/OpenOffice.app/ "$@"'
