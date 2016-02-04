@@ -12,6 +12,7 @@ function suck {
 
 alias meh="echo '¯\_(ツ)_/¯' | tee >(pbcopy)"
 alias flipout="echo '(╯°□°）╯︵ ┻━┻' | tee >(pbcopy)"
+alias outflip="echo '┬──┬◡ﾉ(° -°ﾉ)' | tee >(pbcopy)"
 
 # color
 NORMAL=$(tput sgr0)
