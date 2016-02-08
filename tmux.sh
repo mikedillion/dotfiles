@@ -34,10 +34,10 @@ function tmns() {
 # Autocomplete tmux sessions
 # http://www.nathankowald.com/blog/2014/03/tmux-attach-session-alias/
 _tmux_sessions() {
-    TMUX_SESSIONS=$(tmux ls -F '#S' | xargs)
+  TMUX_SESSIONS=$(tmux ls -F '#S' | xargs)
 
-    local cur=${COMP_WORDS[COMP_CWORD]}
-    COMPREPLY=( $(compgen -W "$TMUX_SESSIONS" -- $cur) )
+  local cur=${COMP_WORDS[COMP_CWORD]}
+  COMPREPLY=( $(compgen -W "$TMUX_SESSIONS" -- $cur) )
 }
 
 complete -F _tmux_sessions tma
