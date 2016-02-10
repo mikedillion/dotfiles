@@ -43,7 +43,7 @@ _tmux_sessions() {
 complete -F _tmux_sessions tma
 complete -F _tmux_sessions tms
 
-tm-rename-window() {
+function tm-rename-window() {
   # This is probably really dumb and will never be used.
   local window_name=$(basename $(pwd))
   # But: "it ain't stupid if it works!"
