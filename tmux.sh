@@ -47,5 +47,5 @@ function tm-rename-window() {
   # This is probably really dumb and will never be used.
   local window_name=$(basename $(pwd))
   # But: "it ain't stupid if it works!"
-  printf "\033k$window_name\033\\"
+  printf "\033k$window_name\033\\" # http://superuser.com/a/565741
 }
