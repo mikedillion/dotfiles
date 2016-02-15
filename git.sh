@@ -219,7 +219,7 @@ alias vgum='vi -O $(gum)'
 
 alias git_contrib='git shortlog -s -n'
 
-git_commit_diff='git log --left-right --graph --cherry-pick --oneline master..'
+alias git_commit_diff='git log --left-right --graph --cherry-pick --oneline master..'
 alias gcd='git_commit_diff'
 
 # Experimental
