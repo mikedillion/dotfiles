@@ -112,6 +112,7 @@ alias telnet_nyan='telnet nyancat.dakko.us'
 alias serve='python -m SimpleHTTPServer'
 
 alias mou='open -a $HOME/Applications/Mou.app "$@"'
+alias macd='open -a $HOME/Applications/MacDown.app "$@"'
 
 # Uh, you'll have to make this 'latest' symlink yourself.
 alias oof='open -a /opt/homebrew-cask/Caskroom/openoffice/latest/OpenOffice.app/ "$@"'
