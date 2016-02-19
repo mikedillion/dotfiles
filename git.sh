@@ -84,7 +84,7 @@ function gciam {
   if [[ $# > 0 ]]; then
     git commit --all --message "$@"
   else
-    red You just make an empty commit with:
+    red You just made a commit with an empty message:
     git commit -a --allow-empty-message -m ''
     git show --minimal
   fi
