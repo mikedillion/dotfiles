@@ -116,3 +116,11 @@ alias macd='open -a $HOME/Applications/MacDown.app "$@"'
 
 # Uh, you'll have to make this 'latest' symlink yourself.
 alias oof='open -a /opt/homebrew-cask/Caskroom/openoffice/latest/OpenOffice.app/ "$@"'
+
+# My fingers have always thought that this should be a thing:
+alias chmox="chmod +x"
+
+ytadl() {
+  youtube-dl  --embed-thumbnail --audio-quality 0 --no-overwrite \
+  --extract-audio --audio-format m4a --output "%(title)s.%(ext)s" "$@"
+}
