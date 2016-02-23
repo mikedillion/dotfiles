@@ -1,0 +1,9 @@
+|----------------+--------------------------------------------------------------------------------------|
+|  ebook-convert | /opt/homebrew-cask/Caskroom/calibre/2.38.0/calibre.app/Contents/MacOS/ebook-convert  |
+|  ebook-device  | /opt/homebrew-cask/Caskroom/calibre/2.38.0/calibre.app/Contents/MacOS/ebook-device   |
+|  ebook-edit    | /opt/homebrew-cask/Caskroom/calibre/2.38.0/calibre.app/Contents/MacOS/ebook-edit     |
+|  ebook-meta    | /opt/homebrew-cask/Caskroom/calibre/2.38.0/calibre.app/Contents/MacOS/ebook-meta     |
+|  ebook-polish  | /opt/homebrew-cask/Caskroom/calibre/2.38.0/calibre.app/Contents/MacOS/ebook-polish   |
+|  ebook-viewer  | /opt/homebrew-cask/Caskroom/calibre/2.38.0/calibre.app/Contents/MacOS/ebook-viewer   |
+|  subl          | /Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl                     |
+|----------------+--------------------------------------------------------------------------------------|
