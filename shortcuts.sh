@@ -53,7 +53,6 @@ function img {
   done;
 }
 
-alias tmcp='cat ~/durr/tmux | grep --color=never "panes on" | pbcopy' # stupid trick until you get this mapped
 alias jsonformat='python -mjson.tool' # pretty print json
 alias get='curl -O'
 alias pbc='pbcopy'
