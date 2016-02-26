@@ -185,8 +185,8 @@ alias grl='git reflog'
 alias gs='git stash'
 alias gsp='git stash pop'
 
-alias ff='git status --ignored'
-alias gg='git status --ignored --short'
+alias ff='git status --ignored .'
+alias gg='git status --ignored --short .'
 
 alias ss='git_find_n_short_status'
 alias qq='git_find_n_short_status'
