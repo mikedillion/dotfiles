@@ -1,40 +1,52 @@
-#!/bin/bash
-#
-# by Sairon Istyar, 2012
-# distributed under the GPLv3 license
-# http://www.opensource.org/licenses/gpl-3.0.html
-#
-
-[ -f ~/.wolfram_api_key ] && . ~/.wolfram_api_key
-
-# properly encode query
-q=$(echo ${*} | sed 's/+/%2B/g' | tr '\ ' '\+')
-
-# fetch and parse result
-result=$(curl -s "http://api.wolframalpha.com/v2/query?input=${q}&appid=${API_KEY}&format=plaintext")
-
-if [ -n "$(echo ${result} | grep 'Invalid appid')" ] ; then
-	echo "Invalid API key!"
-	echo "Get one at https://developer.wolframalpha.com/portal/apisignup.html"
-	echo -n 'Enter your WolframAlpha API key:'
-	read api_key
-	echo "API_KEY=${api_key}" >> ~/.wolfram_api_key
-	exit 1
-fi
-
-result=`echo "${result}" \
-	| tr '\n' '\t' \
-	| sed -e 's/<plaintext>/\'$'\n<plaintext>/g' \
-	| grep -oE "<plaintext>.*</plaintext>|<pod title=.[^\']*" \
-	| sed 's!<plaintext>!!g; \
-		s!</plaintext>!!g; \
-		s!<pod title=.*!\\\x1b[1;36m&\\\x1b[0m!g; \
-		s!<pod title=.!!g; \
-		s!\&amp;!\&!' \
-	| tr '\t' '\n' \
-	| sed  '/^$/d; \
-		s/\ \ */\ /g'`
+#!/usr/bin/env python
+''' WolframAlpha API console client '''
+import os
+import sys
+import colorama
+import requests
+from bs4 import BeautifulSoup
 
 
-# print result
-echo -e "${result}"
+def main():
+    colorama.init(autoreset=True)
+
+    if len(sys.argv[1:]) == 0:
+        sys.stderr.write('WolframAlpha API console client\n')
+        sys.stderr.write('Usage: %s <query>\n' % sys.argv[0])
+        sys.exit(1)
+
+    try:
+        with open(os.path.expanduser('~/.wolfram_api_key')) as apif:
+            apikey = apif.readline().rstrip('\n')
+    except IOError:
+        sys.stderr.write('WolframAlpha API key required to use this script.\n' \
+                         'Get yours at http://products.wolframalpha.com/api/\n')
+        sys.exit(1)
+
+    query = ' '.join(sys.argv[1:])
+    response = requests.get("https://api.wolframalpha.com/v2/query",
+                            params={"input": query, "appid": apikey})
+
+    if not response.ok:
+        raise Exception('HTTP request failed')
+
+    soup = BeautifulSoup(response.text, "lxml")
+
+    if soup.queryresult.attrs['error'] == 'true':
+        raise Exception('WolframAlpha error %s: %s'
+                        % (soup.queryresult.error.code.text,
+                        soup.queryresult.error.msg.text))
+    elif soup.queryresult.attrs['success'] == 'false':
+        raise Exception('WolframAlpha failed to interpret query')
+
+    for pod in soup.findAll('pod'):
+        sys.stdout.write(colorama.Fore.CYAN + pod.attrs['title'] + '\n')
+        for subpod in pod.findAll('subpod'):
+            sys.stdout.write('  %s\n' % subpod.plaintext.text.replace('\n', '\n  '))
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        pass
