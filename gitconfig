@@ -33,6 +33,7 @@
 [pull]
 	default = current
 [core]
+  pager = less
   editor = vim
 	ignorecase = true
 	compression = 0
