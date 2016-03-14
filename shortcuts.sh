@@ -123,3 +123,5 @@ ytadl() {
   youtube-dl  --embed-thumbnail --audio-quality 0 --no-overwrite \
   --extract-audio --audio-format m4a --output "%(title)s.%(ext)s" "$@"
 }
+
+alias vlc="~/Applications/vlC.app/Contents/MacOS/VLC -I ncurses"
