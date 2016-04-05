@@ -10,6 +10,8 @@ function suck {
   cat "$@" | pbcopy
 }
 
+alias yank=suck
+
 alias meh="echo '¯\_(ツ)_/¯' | tee >(pbcopy)"
 alias flipout="echo '(╯°□°）╯︵ ┻━┻' | tee >(pbcopy)"
 alias outflip="echo '┬──┬◡ﾉ(° -°ﾉ)' | tee >(pbcopy)"
