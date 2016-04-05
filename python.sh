@@ -45,6 +45,12 @@ function mkvenv() {
   workon $env_name
 }
 
+function impl() {
+  local current_env=$(basename $VIRTUAL_ENV 2> /dev/null)
+  deactivate
+  rmvirtualenv $current_env
+}
+
 function mvvenv() {
   local current_env=$(basename $VIRTUAL_ENV 2> /dev/null)
   local source_env=$1
