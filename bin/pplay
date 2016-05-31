@@ -1,0 +1,4 @@
+#!/bin/bash
+MUSIC=$(find $HOME/Music -type f -iname "*$1*" | head -n 1)
+echo ">> $MUSIC"
+mplayer -really-quiet -novideo "$MUSIC" > /dev/null 2>&1

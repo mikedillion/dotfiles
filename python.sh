@@ -84,6 +84,7 @@ function mvvenv() {
 
 alias pipp="pip install -r requirements.txt"
 alias psi="python setup.py install"
+alias psc="python setup.py clean"
 
 # 99.9% useless and I'll never use this again ¯\_(ツ)_/¯
 alias envdiff='diff <(lsvirtualenv) <(tmux list-sessions | cut -d ":" -f 2)'
