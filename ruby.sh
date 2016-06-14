@@ -5,6 +5,7 @@ export PATH="${RBENV_ROOT}/bin:$PATH"
 type rbenv &> /dev/null
 if [ $? -eq 0 ]; then
   eval "$(rbenv init -)"
+  #git clone https://github.com/sstephenson/rbenv.git $HOME/.rbenv
   source $HOME/.rbenv/completions/rbenv.bash
   alias rr='rbenv rehash'
 fi
