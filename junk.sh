@@ -109,3 +109,5 @@ function sine_wave() {
     done
     echo
 }
+
+alias checkem="$HOME/Documents/git_check_mine"
