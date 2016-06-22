@@ -21,7 +21,7 @@
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
-	<true/>
+	<false/>
 	<key>ClosingHotkeySwitchesSpaces</key>
 	<true/>
 	<key>CommandSelection</key>
@@ -553,10 +553,12 @@
 	<string>481 110 819 386 0 0 1366 745 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>1255 943 606 456 0 0 2560 1417 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>970 769 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 243 810 502 0 0 1366 745 </string>
+	<string>754 417 810 502 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>228 15 910 730 0 0 1366 745 </string>
+	<string>683 15 680 730 0 0 1366 745 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>1280 726 1280 691 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -2034,6 +2036,8 @@
 			<string>/Users/miked</string>
 		</dict>
 	</array>
+	<key>NoSyncConfirmBeta</key>
+	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
@@ -2046,6 +2050,10 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>7BDEF096-62B4-48F6-843E-AC9B733F1547</string>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -2115,16 +2123,18 @@
 	<integer>8</integer>
 	<key>RightOption</key>
 	<integer>3</integer>
+	<key>SUAutomaticallyUpdate</key>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=55</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=55</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-10T21:00:17Z</date>
+	<date>2016-06-21T14:25:09Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -2180,6 +2190,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.0</string>
+	<string>3.0.2</string>
 </dict>
 </plist>

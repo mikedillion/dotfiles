@@ -84,6 +84,7 @@ function mvvenv() {
 
 alias pipp="pip install -r requirements.txt"
 alias psi="python setup.py install"
+alias psd="python setup.py develop"
 alias psc="python setup.py clean"
 
 # 99.9% useless and I'll never use this again ¯\_(ツ)_/¯
