@@ -111,3 +111,5 @@ function sine_wave() {
 }
 
 alias checkem="$HOME/Documents/git_check_mine"
+
+alias weather="curl -s ipinfo.io/$1 | jq ".city" | curl -s wttr.in/$1 | head -n 38"

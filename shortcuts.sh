@@ -120,7 +120,7 @@ alias oof='open -a /opt/homebrew-cask/Caskroom/openoffice/latest/OpenOffice.app/
 alias chmox="chmod +x"
 
 ytadl() {
-  youtube-dl  --embed-thumbnail --audio-quality 0 --no-overwrite \
+  youtube-dl --verbose --embed-thumbnail --audio-quality 0 --no-overwrite \
   --extract-audio --audio-format m4a --output "%(title)s.%(ext)s" "$@"
 }
 
