@@ -75,6 +75,8 @@ function ogc {
   open -a Google\ Chrome $1
 }
 
+alias oo='ogc'
+
 function ack_ {
   pattern=$1
   shift
