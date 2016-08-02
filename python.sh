@@ -83,6 +83,7 @@ function mvvenv() {
 }
 
 alias pipp="pip install -r requirements.txt"
+alias pipf="pip freeze"
 alias psi="python setup.py install"
 alias psd="python setup.py develop"
 alias psc="python setup.py clean"

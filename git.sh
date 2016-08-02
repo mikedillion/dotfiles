@@ -160,7 +160,6 @@ function gtag() {
 alias git='hub'
 alias gap='git add --patch'
 alias gapg='git add --patch `gus`'
-alias gb='git browse'
 alias gbr='git branch -vv'
 alias gbrs='git-branch-status'
 alias gci='git commit'
@@ -202,6 +201,14 @@ alias gcrrr='git clean -dfx && git reset HEAD --hard'
 
 # hub specific
 alias gcist='hub ci-status'
+
+function gb(){
+  if [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) ]]; then
+    hub browse $@
+  else
+    open https://github.com/mikedillion/$@
+  fi
+}
 
 # quickly open those things you're working
 ################################################################################

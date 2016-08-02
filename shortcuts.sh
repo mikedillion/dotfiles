@@ -112,11 +112,11 @@ alias telnet_nyan='telnet nyancat.dakko.us'
 
 alias serve='python -m SimpleHTTPServer'
 
-alias mou='open -a $HOME/Applications/Mou.app "$@"'
-alias macd='open -a $HOME/Applications/MacDown.app "$@"'
+alias mou='open -a /Applications/Mou.app "$@"'
+alias macd='open -a /Applications/MacDown.app "$@"'
 
 # Uh, you'll have to make this 'latest' symlink yourself.
-alias oof='open -a /opt/homebrew-cask/Caskroom/openoffice/latest/OpenOffice.app/ "$@"'
+alias oof='open -a /usr/local/Caskroom/openoffice/latest/OpenOffice.app/ "$@"'
 
 # My fingers have always thought that this should be a thing:
 alias chmox="chmod +x"
@@ -126,4 +126,5 @@ ytadl() {
   --extract-audio --audio-format m4a --output "%(title)s.%(ext)s" "$@"
 }
 
-alias vlc="~/Applications/vlC.app/Contents/MacOS/VLC -I ncurses"
+alias vlc="/Applications/VLC.app/Contents/MacOS/VLC -I ncurses"
+alias vlc="/usr/local/Caskroom/vlc/2.2.1/VLC.app/Contents/MacOS/VLC -I ncurses"
