@@ -65,7 +65,9 @@
 [color "grep"]
 	linenumber = blue
 	filename = green bold
-[filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
+
+# Fix this so lfs doesn't barf
+# [filter "lfs"]
+# 	clean = git lfs clean %f
+# 	smudge = git lfs smudge %f
+# 	required = true
