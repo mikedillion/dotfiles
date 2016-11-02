@@ -30,6 +30,7 @@ alias lsvirtualenv="lsvirtualenv -b"
 #  fi
 #}
 
+# Make virtualenv and activate it
 function mkvenv() {
   if [ $# -eq 0 ]; then
     # if [ -v TMUX ]; then # for bash > 4.2
@@ -45,12 +46,9 @@ function mkvenv() {
   workon $env_name
 }
 
-function impl() {
-  local current_env=$(basename $VIRTUAL_ENV 2> /dev/null)
-  deactivate
-  rmvirtualenv $current_env
-}
-
+# Move a virtualenv
+# usage: mvvenv desination_env
+#        mvvenv source_env desination_env
 function mvvenv() {
   local current_env=$(basename $VIRTUAL_ENV 2> /dev/null)
   local source_env=$1
@@ -81,6 +79,14 @@ function mvvenv() {
     deactivate
   fi
 }
+
+# Implode a virtualenv
+function impl() {
+  local current_env=$(basename $VIRTUAL_ENV 2> /dev/null)
+  deactivate
+  rmvirtualenv $current_env
+}
+
 
 alias pipp="pip install -r requirements.txt"
 alias pipf="pip freeze"
