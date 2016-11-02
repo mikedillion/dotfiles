@@ -39,20 +39,37 @@
 	compression = 0
 	excludesfile = ~/.gitignore.global
 
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
+# [diff]
+# 	tool = Kaleidoscope
+# [difftool]
+# 	prompt = false
+# [difftool "Kaleidoscope"]
+# 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[mergetool]
-	prompt = false
+# [merge]
+# 	tool = Kaleidoscope
+# [mergetool]
+# 	prompt = false
+# [mergetool "Kaleidoscope"]
+# 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+# 	trustExitCode = true
+
+[diff]
+  tool = bcomp
+[difftool]
+  prompt = false
+[difftool "bcomp"]
+  cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE"
+  trustExitCode = true
+
 [merge]
-	tool = Kaleidoscope
+  tool = bcomp
+[mergetool]
+  prompt = false
+  keepBackup = false
+[mergetool "bcomp"]
+  trustExitCode = true
+  cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 
 [filter "media"]
 	required = true
