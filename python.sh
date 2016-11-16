@@ -1,9 +1,9 @@
 export PYTHONSTARTUP="$HOME/.pythonrc"
 
 # TODO(me!): Sort all this out later
-#export VIRTUALENVWRAPPER_PYTHON=`which python`
-#export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
-#source `which virtualenvwrapper.sh`
+export VIRTUALENVWRAPPER_PYTHON=`which python`
+# export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
+# source `which virtualenvwrapper.sh`
 
 #if [ -e "/usr/local/bin/pyenv" ]; then
 #  export PYENV_ROOT="$HOME/.pyenv"
@@ -11,9 +11,10 @@ export PYTHONSTARTUP="$HOME/.pythonrc"
 #  eval "$(pyenv init -)"
 #fi
 
-if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
-  source /usr/local/bin/virtualenvwrapper.sh
+if [ -e "/usr/local/bin/virtualenvwrapper.sh" ] || [ -e "./.local/bin/virtualenvwrapper.sh" ]; then
   export WORKON_HOME="$HOME/.python_envs"
+  # source /usr/local/bin/virtualenvwrapper.sh
+  source ./.local/bin/virtualenvwrapper.sh
 fi
 
 # virtualenv stuff
