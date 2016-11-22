@@ -11,10 +11,11 @@ export VIRTUALENVWRAPPER_PYTHON=`which python`
 #  eval "$(pyenv init -)"
 #fi
 
-if [ -e "/usr/local/bin/virtualenvwrapper.sh" ] || [ -e "./.local/bin/virtualenvwrapper.sh" ]; then
-  export WORKON_HOME="$HOME/.python_envs"
-  # source /usr/local/bin/virtualenvwrapper.sh
-  source ./.local/bin/virtualenvwrapper.sh
+export WORKON_HOME="$HOME/.python_envs"
+if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
+  source /usr/local/bin/virtualenvwrapper.sh
+elif [ -e "$HOME/.local/bin/virtualenvwrapper.sh" ]; then
+  source $HOME/.local/bin/virtualenvwrapper.sh
 fi
 
 # virtualenv stuff

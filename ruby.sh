@@ -10,9 +10,9 @@ if [ $? -eq 0 ]; then
   alias rr='rbenv rehash'
 fi
 
-export PATH="$HOME/.gem/ruby/2.3.0/bin:$PATH"
-# export PATH="$HOME/.gem/ruby/2.2.0/bin:$PATH"
 # export PATH="$HOME/.gem/ruby/1.9.1/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.2.0/bin:$PATH"
+# export PATH="$HOME/.gem/ruby/2.3.0/bin:$PATH"
 
 alias be='bundle exec'
 alias fs='foreman start'
