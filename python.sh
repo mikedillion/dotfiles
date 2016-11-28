@@ -1,24 +1,11 @@
 export PYTHONSTARTUP="$HOME/.pythonrc"
-
-# TODO(me!): Sort all this out later
-export VIRTUALENVWRAPPER_PYTHON=`which python`
-# export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
-# source `which virtualenvwrapper.sh`
-
-#if [ -e "/usr/local/bin/pyenv" ]; then
-#  export PYENV_ROOT="$HOME/.pyenv"
-#  export PATH="$PYENV_ROOT/bin:$PATH"
-#  eval "$(pyenv init -)"
-#fi
-
-export WORKON_HOME="$HOME/.python_envs"
-if [ -e "/usr/local/bin/virtualenvwrapper.sh" ]; then
-  source /usr/local/bin/virtualenvwrapper.sh
-elif [ -e "$HOME/.local/bin/virtualenvwrapper.sh" ]; then
-  source $HOME/.local/bin/virtualenvwrapper.sh
-fi
+export PYTHONPATH="$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH"
 
 # virtualenv stuff
+########################################
+export WORKON_HOME="$HOME/.python_envs"
+source /usr/local/bin/virtualenvwrapper.sh
+
 alias de="deactivate"
 
 alias lsvirtualenv="lsvirtualenv -b"
@@ -88,7 +75,6 @@ function impl() {
   deactivate
   rmvirtualenv $current_env
 }
-
 
 alias pipp="pip install -r requirements.txt"
 alias pipf="pip freeze"

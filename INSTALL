@@ -6,4 +6,3 @@ ln -sf ~/dotfiles/gitignore.gloabl ~/.gitignore.global
 ln -sf ~/dotfiles/irbrc ~/.irbrc
 ln -sf ~/dotfiles/npmrc ~/.npmrc
 ln -sf ~/dotfiles/octaverc ~/.octaverc
-ln -sf ~/dotfiles/virtualenvs ~/.virtualenvs
