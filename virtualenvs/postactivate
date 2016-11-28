@@ -1,4 +1,0 @@
-#!/bin/bash
-# This hook is sourced after every virtualenv is activated.
-
-PS1="\[\e[32m\](`basename \"$VIRTUAL_ENV\"`) \[\e[m\]$_OLD_VIRTUAL_PS1"
