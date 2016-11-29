@@ -11,35 +11,50 @@ while true; do
     --title "Select a station to listen to" \
     --clear \
     --radiolist "Select a station to listen to" 20 60 24 \
-      "groovesalad"    "Groove Salad"           off \
-      "lush"           "Lush"                   off \
-      "dronezone"      "Drone Zone"             off \
-      "sonicuniverse"  "Sonic Universe"         off \
-      "digitalis"      "Digitalis"              off \
-      "indiepoprocks"  "indie pop rocks"        off \
-      "poptron"        "PopTron"                off \
-      "480min"         "480 Minutes"            off \
-      "covers"         "Covers"                 off \
-      "u80s"           "Underground 80s"        off \
-      "secretagent"    "Secret Agent"           off \
-      "suburbsofgoa"   "Suburbs of Goa"         off \
-      "beatblender"    "Beat Blender"           off \
-      "dubstep"        "Dub Step Beyond"        off \
-      "cliqhop"        "cliqhop idm"            off \
-      "spacestation"   "Space Station"          off \
-      "missioncontrol" "Mission Control"        off \
-      "bootliquor"     "Boot Liquor"            off \
-      "illstreet"      "Illinois Street Lounge" off \
-      "tags"           "Tags Trip"              off \
-      "doomed"         "Doomed"                 off \
-      "brfm"           "Black Rock FM"          off \
-      "sxfm"           "South by Soma"          off \
-      "sf1033"         "SF 10-33"               off \
-      "xmasinfrisko"   "Xmas in Frisko"         off \
-      "christmas"      "Christmas Lounge"       off \
-      "xmasrocks"      "Christmas Rocks!"       off \
-      "bagel"          "BAGel Radio"            off \
-      "folkfwd"        "Fold Forward"           off 2> $tempfile
+      "480min"           "480 Minutes"            off \
+      "7soul"            "Seven Inch Soul"        off \
+      "bagel"            "BAGel Radio"            off \
+      "beatblender"      "Beat Blender"           off \
+      "bootliquor"       "Boot Liquor"            off \
+      "bootliquor320"    "Boot Liquor 320"        off \
+      "brfm"             "Black Rock FM"          off \
+      "christmas"        "Christmas Lounge"       off \
+      "cliqhop"          "cliqhop idm"            off \
+      "cliqhop256"       "cliqhop idm"            off \
+      "covers"           "Covers"                 off \
+      "deepspaceone"     "Deep Space One"         off \
+      "defcon256"        "DEF CON Radio"          off \
+      "digitalis"        "Digitalis"              off \
+      "doomed"           "Doomed"                 off \
+      "dronezone"        "Drone Zone"             off \
+      "dubstep"          "Dub Step Beyond"        off \
+      "dubstep256"       "Dub Step Beyond 256"    off \
+      "earwaves"         "Earwaves"               off \
+      "fluid"            "Fluid"                  off \
+      "folkfwd"          "Fold Forward"           off \
+      "groovesalad"      "Groove Salad"           off \
+      "illstreet"        "Illinois Street Lounge" off \
+      "indiepop"         "Indie Pop Rocks!"       off \
+      "jollysoul"        "Jolly Ol' Soul"         off \
+      "lush"             "Lush"                   off \
+      "metal"            "Metal Detector"         off \
+      "missioncontrol"   "Mission Control"        off \
+      "poptron"          "PopTron"                off \
+      "secretagent"      "Secret Agent"           off \
+      "seventies320"     "Left Coast 70s"         off \
+      "sf1033"           "SF 10-33"               off \
+      "silent"           "The Silent Channel"     off \
+      "sonicuniverse"    "Sonic Universe"         off \
+      "sonicuniverse192" "Sonic Universe 192"     off \
+      "spacestation"     "Space Station"          off \
+      "suburbsofgoa"     "Suburbs of Goa"         off \
+      "sxfm"             "South by Soma"          off \
+      "tags"             "Tags Trip"              off \
+      "thetrip"          "The Trip"               off \
+      "thistle"          "Thistle Radio"          off \
+      "u80s"             "Underground 80s"        off \
+      "xmasinfrisko"     "Xmas in Frisko"         off \
+      "xmasrocks"        "Christmas Rocks!"       off 2> $tempfile
 
   test $? == 1 && exit
   station="$(cat $tempfile)"
