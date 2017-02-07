@@ -86,7 +86,7 @@ function gciam {
   else
     red You just made a commit with an empty message:
     git commit -a --allow-empty-message -m ''
-    git show --minimal
+    git --no-pager show --minimal
   fi
 }
 
