@@ -127,4 +127,3 @@ ytadl() {
 }
 
 alias vlc="/Applications/VLC.app/Contents/MacOS/VLC -I ncurses"
-alias vlc="/usr/local/Caskroom/vlc/2.2.1/VLC.app/Contents/MacOS/VLC -I ncurses"
