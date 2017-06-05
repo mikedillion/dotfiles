@@ -123,7 +123,7 @@ alias chmox="chmod +x"
 
 ytadl() {
   youtube-dl --verbose --embed-thumbnail --audio-quality 0 --no-overwrite \
-  --extract-audio --audio-format m4a --output "%(title)s.%(ext)s" "$@"
+  --extract-audio --audio-format mp3 --output "%(title)s.%(ext)s" "$@"
 }
 
 alias vlc="/Applications/VLC.app/Contents/MacOS/VLC -I ncurses"
