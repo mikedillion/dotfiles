@@ -1,3 +1,5 @@
+alias vi="/usr/local/bin/vim"
+
 alias gi='vi' # fat fingers
 alias mvi='mvim' # MacVim
 
