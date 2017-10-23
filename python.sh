@@ -86,4 +86,5 @@ alias psc="python setup.py clean"
 # 99.9% useless and I'll never use this again ¯\_(ツ)_/¯
 alias envdiff='diff <(lsvirtualenv) <(tmux list-sessions | cut -d ":" -f 2)'
 
-export PATH="$PATH:/Users/miked/anaconda3/bin"
+# Anaconda
+# export PATH="$PATH:/Users/miked/anaconda3/bin"
