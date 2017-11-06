@@ -7,7 +7,3 @@
 # ctags
 tags
 gems.tags
-
-# some dumb thing I'm trying
-lemmein
-.vagrant_ssh-config

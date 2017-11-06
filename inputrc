@@ -7,6 +7,7 @@
 #set -o vi
 #set editing-mode vi
 #set keymap vi
+#set keymap vi-command
 
 #"\e[1~": beginning-of-line
 #"\e[4~": end-of-line
