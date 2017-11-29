@@ -13,9 +13,11 @@ import os
 history_path = os.path.join(os.environ['HOME'],'.pyhistory')
 
 def save_history(history_path=history_path):
+  import readline
   readline.write_history_file(history_path)
 
 if os.path.exists(history_path):
+  import readline
   readline.read_history_file(history_path)
 
 atexit.register(save_history)
