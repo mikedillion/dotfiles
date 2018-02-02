@@ -8,4 +8,3 @@ ln -sf $HOME/dotfiles/npmrc $HOME/.npmrc
 ln -sf $HOME/dotfiles/octaverc $HOME/.octaverc
 ln -sf $HOME/dotfiles/eaglerc $HOME/.eaglerc
 ln -sf $HOME/dotfiles/pythonrc $HOME/.pythonrc
-ln -sf $HOME/dotfiles/Rprofile $HOME/.Rprofile
