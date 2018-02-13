@@ -4,7 +4,6 @@ ln -sf $HOME/dotfiles/dotgemrc $HOME/.gemrc
 ln -sf $HOME/dotfiles/gitconfig $HOME/.gitconfig
 ln -sf $HOME/dotfiles/gitignore.gloabl $HOME/.gitignore.global
 ln -sf $HOME/dotfiles/irbrc $HOME/.irbrc
-ln -sf $HOME/dotfiles/npmrc $HOME/.npmrc
 ln -sf $HOME/dotfiles/octaverc $HOME/.octaverc
 ln -sf $HOME/dotfiles/eaglerc $HOME/.eaglerc
 ln -sf $HOME/dotfiles/pythonrc $HOME/.pythonrc
