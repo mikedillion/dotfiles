@@ -1,6 +1,6 @@
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PYTHONSTARTUP="$HOME/.pythonrc"
-# export PYTHONPATH="$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH"
+export PYTHONPATH="$(brew --prefix)/lib/python3.6/site-packages:$PYTHONPATH"
 
 # virtualenv stuff
 ########################################
