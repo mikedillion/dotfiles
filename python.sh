@@ -5,10 +5,19 @@
 # |____/ \___/|_| |_|  \__|  _/ |\__,_|\__,_|\__, |\___(_)
 #                           |__/             |___/
 
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-
 export PYTHONSTARTUP="$HOME/.pythonrc"
-export PYTHONPATH="$(brew --prefix)/lib/python3.6/site-packages:$PYTHONPATH"
+
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PYTHONHOME="/usr/local/opt/python/Frameworks/Python.framework/Versions/3.6/"
+export PYTHONPATH="/usr/local/lib/python3.6/site-packages:$PYTHONPATH"
+
+# https://github.com/pyenv/pyenv
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+
+# if command -v pyenv 1>/dev/null 2>&1; then
+#   eval "$(pyenv init -)"
+# fi
 
 # export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
 # export PYTHONPATH="$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH"
