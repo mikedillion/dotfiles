@@ -1,5 +1,5 @@
 function dump {
-  pbpaste >| "$@"
+  pbpaste > "$@"
 }
 
 function dumpv {
