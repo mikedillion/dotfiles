@@ -110,7 +110,10 @@ function findf {
 
 alias telnet_nyan='telnet nyancat.dakko.us'
 
-alias serve='python -m SimpleHTTPServer'
+# alias serve='python -m SimpleHTTPServer'
+# alias serve='ruby -run -e httpd . -p 8000'
+alias serve='python3 -m http.server'
+
 
 alias mou='open -a /Applications/Mou.app "$@"'
 alias macd='open -a /Applications/MacDown.app "$@"'
