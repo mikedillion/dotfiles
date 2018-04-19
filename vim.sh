@@ -1,3 +1,5 @@
+export PATH="$PATH:/Applications/MacVim.app/Contents/bin/"
+
 alias vi="/usr/local/bin/vim"
 
 alias gi='vi' # fat fingers
