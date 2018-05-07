@@ -8,7 +8,8 @@
 export PYTHONSTARTUP="$HOME/.pythonrc"
 
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PYTHONHOME="/usr/local/opt/python/Frameworks/Python.framework/Versions/3.6/"
+# export PYTHONHOME="/usr/local/opt/python/Frameworks/Python.framework/Versions/3.6/"
+export PYTHONHOME="/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6"
 export PYTHONPATH="/usr/local/lib/python3.6/site-packages"
 
 # https://github.com/pyenv/pyenv

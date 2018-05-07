@@ -5,9 +5,15 @@
     path = ~/dotfiles_private/gitconfig_private
 
 [color]
-	status = auto
-	branch = auto
-	ui = auto
+	status = always
+	branch = always
+	ui = always
+  diff = always
+  interactive = always
+  grep = always
+  pager = true
+  decorate = always
+  showbranch = always
 
 [alias]
 	br = branch
