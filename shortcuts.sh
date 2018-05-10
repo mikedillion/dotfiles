@@ -5,7 +5,7 @@ alias weechat='/usr/local/Cellar/weechat/0.4.0/bin/weechat-curses'
 alias l='ll'
 alias ll='ls -alh'
 alias ls='ls -1'
-alias fact="elinks -dump randomfunfacts.com | sed -n '/^| /p' | tr -d \|"
+# alias fact="elinks -dump randomfunfacts.com | sed -n '/^| /p' | tr -d \|"
 alias ssh_ls='sudo lsof -i -n | egrep "\<ssh\>"'
 alias aa='ack -i -A 10 -B 10'
 
