@@ -114,9 +114,12 @@ alias telnet_nyan='telnet nyancat.dakko.us'
 # alias serve='ruby -run -e httpd . -p 8000'
 alias serve='python3 -m http.server'
 
-
+# Markdown tools on command line
+alias mo='open -a /Applications/Markoff.app "$@"'
 alias mou='open -a /Applications/Mou.app "$@"'
 alias macd='open -a /Applications/MacDown.app "$@"'
+
+alias jnv='open -a /Applications/Jupyter\ Notebook\ Viewer.app "$@"'
 
 # Uh, you'll have to make this 'latest' symlink yourself.
 alias oof='open -a /usr/local/Caskroom/openoffice/latest/OpenOffice.app/ "$@"'
