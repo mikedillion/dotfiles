@@ -157,7 +157,13 @@ function gtag() {
 #  rl = reflog
 #  st = status
 #
+
+# https://github.com/github/hub
 alias git='hub'
+
+# https://github.com/zaquestion/lab
+alias git='lab'
+
 alias gap='git add --patch'
 alias gapg='git add --patch `gus`'
 alias gbr='git branch -vv'
@@ -166,6 +172,8 @@ alias gci='git commit'
 alias gcia='git commit --all'
 alias gcim='git commit --message'
 alias gcl='git clone'
+alias gclm='git clone --mirror'
+alias gcls='git clone --depth 1'
 alias gcb='git checkout -b $(basename $PWD)'
 alias gdi='git diff'
 alias gdis='git diff --staged'
