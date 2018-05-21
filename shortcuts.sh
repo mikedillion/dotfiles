@@ -128,6 +128,7 @@ alias oof='open -a /usr/local/Caskroom/openoffice/latest/OpenOffice.app/ "$@"'
 alias chmox="chmod +x"
 
 ytadl() {
+  # brew install AtomicParsley and the thumbnail part will actuall work!
   youtube-dl --ignore-errors --verbose --embed-thumbnail --audio-quality 0 --no-overwrite \
   --extract-audio --audio-format mp3 --output "%(title)s.%(ext)s" "$@"
 }
