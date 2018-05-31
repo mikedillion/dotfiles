@@ -1,8 +1,5 @@
 [include]
-    path = ~/dotfiles/gitconfig_user
-
-[include]
-    path = ~/dotfiles_private/gitconfig_private
+  path = ~/dotfiles_private/gitconfig_private
 
 [color]
 	status = always
