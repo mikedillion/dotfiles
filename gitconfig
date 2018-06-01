@@ -2,9 +2,9 @@
   path = ~/dotfiles_private/gitconfig_private
 
 [color]
-	status = always
-	branch = always
-	ui = always
+  status = always
+  branch = always
+  ui = always
   diff = always
   interactive = always
   grep = always
@@ -13,66 +13,68 @@
   showbranch = always
 
 [alias]
-	br = branch
-	ci = commit
-	cl = clone
-	co = checkout
-	di = diff
-	ls = status
-	pl = pull
-	pom = push origin master
-	pu = push
-	r = reset
-	rb = rebase
-	rl = reflog
-	st = status
+  br = branch
+  ci = commit
+  cl = clone
+  co = checkout
+  di = diff
+  ls = status
+  pl = pull
+  pom = push origin master
+  pu = push
+  r = reset
+  rb = rebase
+  rl = reflog
+  st = status
   ll = log --pretty=format:$'%ad \t %an \t %s' --date=relative --
-	lf = log --format=fuller
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-	lag = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	blog = log --graph --simplify-by-decoration --pretty=format:'%d' --all
-	url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/github\\\\.com\\\\/\\\\1/g"'
-	ag = grep-with-smartcase -I --perl-regexp --break --heading --line-number
-	ack = grep-with-smartcase -I --perl-regexp --break --heading --line-number
-	dad = !curl https://icanhazdadjoke.com/ && git add
-
-[push]
-	default = current
-
-[pull]
-	default = current
+  lf = log --format=fuller
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  lag = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  blog = log --graph --simplify-by-decoration --pretty=format:'%d' --all
+  url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/github\\\\.com\\\\/\\\\1/g"'
+  ag = grep-with-smartcase -I --perl-regexp --break --heading --line-number
+  ack = grep-with-smartcase -I --perl-regexp --break --heading --line-number
+  dad = !curl https://icanhazdadjoke.com/ && git add
 
 [core]
   pager = less
   editor = vim
-	ignorecase = true
-	compression = 0
-	excludesfile = ~/.gitignore.global
+  ignorecase = true
+  compression = 0
+  excludesfile = ~/.gitignore.global
 
+[push]
+  default = current
+
+[pull]
+  default = current
+
+[commit]
+  verbose = true
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 
 [hub]
-	protocol = https
+  protocol = https
 
 [color "grep"]
-	linenumber = blue
-	filename = green bold
+  linenumber = blue
+  filename = green bold
 
 [diff]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
 [difftool]
-	prompt = false
+  prompt = false
 [difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [merge]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
 [mergetool]
-	prompt = false
+  prompt = false
 [mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
 
 # [diff]
 #   tool = bcomp
@@ -92,16 +94,13 @@
 #   cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 
 [filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
 
 # Fix this so lfs doesn't barf
 # [filter "lfs"]
-#		clean = git-lfs clean -- %f
-#		smudge = git-lfs smudge -- %f
-#		process = git-lfs filter-process
-#		required = true
-
-[commit]
-	verbose = true
+#    clean = git-lfs clean -- %f
+#    smudge = git-lfs smudge -- %f
+#    process = git-lfs filter-process
+#    required = true
