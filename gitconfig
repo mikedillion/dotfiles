@@ -1,5 +1,5 @@
 [include]
-  path = ~/dotfiles_private/gitconfig_private
+  path = ~/dotfiles_private/git/gitconfig_private
 
 [color]
   status = always
@@ -13,19 +13,20 @@
   showbranch = always
 
 [alias]
-  br = branch
-  ci = commit
-  cl = clone
-  co = checkout
-  di = diff
-  ls = status
-  pl = pull
-  pom = push origin master
-  pu = push
-  r = reset
-  rb = rebase
-  rl = reflog
-  st = status
+	br = branch
+	ci = commit
+	cl = clone
+	co = checkout
+	di = diff
+	ls = status
+	pl = pull
+	pom = push origin master
+	pu = push
+	r = reset
+	rb = rebase
+	rl = reflog
+	st = status
+  ; https://git-scm.com/docs/pretty-formats
   ll = log --pretty=format:$'%ad \t %an \t %s' --date=relative --
   lf = log --format=fuller
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative

@@ -10,7 +10,7 @@ else:
 import atexit
 import os
 
-history_path = os.path.join(os.environ['HOME'],'.pyhistory')
+history_path = os.path.join(os.path.expanduser("~"),'.pyhistory')
 
 def save_history(history_path=history_path):
   import readline
