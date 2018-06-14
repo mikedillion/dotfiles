@@ -10,3 +10,4 @@ ln -sf $HOME/dotfiles/config/octaverc $HOME/.octaverc
 ln -sf $HOME/dotfiles/config/eaglerc $HOME/.eaglerc
 ln -sf $HOME/dotfiles/config/pythonrc $HOME/.pythonrc
 ln -sf $HOME/dotfiles/config/ctags $HOME/.ctags
+ln -sf $HOME/dotfiles/config/lessfilter $HOME/.lessfilter
