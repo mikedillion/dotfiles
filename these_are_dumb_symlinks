@@ -1,9 +1,0 @@
-|----------------+--------------------------------------------------------------------------------------|
-|  ebook-convert | /usr/local/Caskroom/calibre/2.38.0/calibre.app/Contents/MacOS/ebook-convert  |
-|  ebook-device  | /usr/local/Caskroom/calibre/2.38.0/calibre.app/Contents/MacOS/ebook-device   |
-|  ebook-edit    | /usr/local/Caskroom/calibre/2.38.0/calibre.app/Contents/MacOS/ebook-edit     |
-|  ebook-meta    | /usr/local/Caskroom/calibre/2.38.0/calibre.app/Contents/MacOS/ebook-meta     |
-|  ebook-polish  | /usr/local/Caskroom/calibre/2.38.0/calibre.app/Contents/MacOS/ebook-polish   |
-|  ebook-viewer  | /usr/local/Caskroom/calibre/2.38.0/calibre.app/Contents/MacOS/ebook-viewer   |
-|  subl          | /Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl                     |
-|----------------+--------------------------------------------------------------------------------------|
