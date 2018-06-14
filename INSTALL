@@ -1,7 +1,7 @@
 ln -sf $HOME/dotfiles/bin $HOME/bin
 
-ln -sf $HOME/dotfiles/gitconfig $HOME/.gitconfig
-ln -sf $HOME/dotfiles/gitignore.gloabl $HOME/.gitignore.global
+ln -sf $HOME/dotfiles/git/gitconfig $HOME/.gitconfig
+ln -sf $HOME/dotfiles/git/gitignore.global $HOME/.gitignore.global
 
 ln -sf $HOME/dotfiles/config/inputrc $HOME/.inputrc
 ln -sf $HOME/dotfiles/config/dotgemrc $HOME/.gemrc
