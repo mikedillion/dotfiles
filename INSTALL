@@ -1,9 +1,11 @@
 ln -sf $HOME/dotfiles/bin $HOME/bin
-ln -sf $HOME/dotfiles/inputrc $HOME/.inputrc
-ln -sf $HOME/dotfiles/dotgemrc $HOME/.gemrc
+
 ln -sf $HOME/dotfiles/gitconfig $HOME/.gitconfig
 ln -sf $HOME/dotfiles/gitignore.gloabl $HOME/.gitignore.global
-ln -sf $HOME/dotfiles/irbrc $HOME/.irbrc
-ln -sf $HOME/dotfiles/octaverc $HOME/.octaverc
-ln -sf $HOME/dotfiles/eaglerc $HOME/.eaglerc
-ln -sf $HOME/dotfiles/pythonrc $HOME/.pythonrc
+
+ln -sf $HOME/dotfiles/config/inputrc $HOME/.inputrc
+ln -sf $HOME/dotfiles/config/dotgemrc $HOME/.gemrc
+ln -sf $HOME/dotfiles/config/irbrc $HOME/.irbrc
+ln -sf $HOME/dotfiles/config/octaverc $HOME/.octaverc
+ln -sf $HOME/dotfiles/config/eaglerc $HOME/.eaglerc
+ln -sf $HOME/dotfiles/config/pythonrc $HOME/.pythonrc
