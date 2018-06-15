@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+
+# https://github.com/djl/vcprompt/blob/master/bin/vcprompt
+
 """
 Usage: vcprompt [options]
 
