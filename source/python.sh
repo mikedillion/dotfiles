@@ -98,7 +98,13 @@ function impl() {
   rmvirtualenv $current_env
 }
 
-alias pipp="pip install -r requirements.txt"
+function pipp() {
+  pip install -r requirements.txt
+  if [ -f "requirements-dev.txt" ]; then
+    pip install -r requirements-dev.txt
+  fi
+}
+
 alias pipf="pip freeze"
 alias psi="python setup.py install"
 alias psd="python setup.py develop"
