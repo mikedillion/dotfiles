@@ -5,6 +5,12 @@ GIT_DIRS=`find . -type d -name ".git" | grep --color=never --only-matching '.*/'
 for folder in $GIT_DIRS; do
   REMOTES=$(git --git-dir="$folder.git" --work-tree="$folder" remote -v show)
   if [ -z "$REMOTES" ]; then
-    echo $folder
+    SHORT_STAT=$(git --git-dir="$folder.git" --work-tree="$folder" status --short --ignored)
+    if [ -n "$SHORT_STAT" ]; then
+      echo "################################################################################"
+      tput setaf 1 && toilet --font smbraille --filter border $folder && tput reset
+      git --git-dir="$folder.git" --work-tree="$folder" status --short --ignored
+      echo "################################################################################"
+    fi
   fi
 done
