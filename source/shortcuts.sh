@@ -116,6 +116,7 @@ alias serve='python3 -m http.server'
 
 # Markdown tools on command line
 alias mo='open -a /Applications/Markoff.app "$@"'
+alias mt='open -a /Applications/Mark\ Text.app "$@"'
 alias mou='open -a /Applications/Mou.app "$@"'
 alias macd='open -a /Applications/MacDown.app "$@"'
 
