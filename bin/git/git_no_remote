@@ -1,0 +1,10 @@
+#!/bin/bash
+
+GIT_DIRS=`find . -type d -name ".git" | grep --color=never --only-matching '.*/'`
+
+for folder in $GIT_DIRS; do
+  REMOTES=$(git --git-dir="$folder.git" --work-tree="$folder" remote -v show)
+  if [ -z "$REMOTES" ]; then
+    echo $folder
+  fi
+done
