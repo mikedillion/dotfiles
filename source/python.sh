@@ -5,12 +5,13 @@
 # |____/ \___/|_| |_|  \__|  _/ |\__,_|\__,_|\__, |\___(_)
 #                           |__/             |___/
 
-export PYTHONSTARTUP="$HOME/.pythonrc"
+# export PYTHONSTARTUP="$HOME/.pythonrc"
 
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-# export PYTHONHOME="/usr/local/opt/python/Frameworks/Python.framework/Versions/3.6/"
-# export PYTHONHOME="/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6"
-# export PYTHONPATH="/usr/local/lib/python3.6/site-packages"
+# export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# export PYTHONHOME="/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/"
+# export PYTHONHOME="/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7"
+# /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages
+# export PYTHONPATH="/usr/local/lib/python3.7/site-packages"
 
 # https://github.com/pyenv/pyenv
 # export PYENV_ROOT="$HOME/.pyenv"
@@ -26,6 +27,7 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 # virtualenv stuff
 ########################################
 export WORKON_HOME="$HOME/.python_envs"
+export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
 source /usr/local/bin/virtualenvwrapper.sh
 
 alias de="deactivate"
