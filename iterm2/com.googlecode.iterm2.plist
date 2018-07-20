@@ -458,7 +458,7 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>CF8FCA6D-BF99-4C06-B4ED-8CC613360914</string>
+	<string>78209A45-D67F-482F-A124-EFBEED845313</string>
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
@@ -559,18 +559,22 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>404 110 970 370 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 207 599 388 0 0 1440 877 </string>
+	<string>269 219 606 469 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>322 413 918 381 0 0 1440 877 </string>
+	<string>322 107 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>240 0 955 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>720 525 570 352 0 0 1440 877 </string>
+	<string>0 0 1200 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>720 23 717 854 0 0 1440 877 </string>
+	<string>720 525 570 352 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>240 525 570 352 0 0 1440 877 </string>
 	<key>NeverWarnAboutShortLivedSessions_AA28E9CF-E291-455E-B389-CDE958C08812</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_AA28E9CF-E291-455E-B389-CDE958C08812_selection</key>
@@ -2201,6 +2205,8 @@
 	<integer>8</integer>
 	<key>RightOption</key>
 	<integer>3</integer>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -2210,7 +2216,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-07T18:06:23Z</date>
+	<date>2018-07-20T03:25:23Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -2272,6 +2278,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.5</string>
+	<string>3.1.7</string>
 </dict>
 </plist>
