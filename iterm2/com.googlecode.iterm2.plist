@@ -568,13 +568,17 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>322 107 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>240 0 955 877 0 0 1440 877 </string>
+	<string>240 525 570 352 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 1200 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>720 525 570 352 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>240 525 570 352 0 0 1440 877 </string>
+	<key>NeverWarnAboutShortLivedSessions_78209A45-D67F-482F-A124-EFBEED845313</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_78209A45-D67F-482F-A124-EFBEED845313_selection</key>
+	<integer>0</integer>
 	<key>NeverWarnAboutShortLivedSessions_AA28E9CF-E291-455E-B389-CDE958C08812</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_AA28E9CF-E291-455E-B389-CDE958C08812_selection</key>
