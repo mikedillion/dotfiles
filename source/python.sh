@@ -27,8 +27,14 @@
 # virtualenv stuff
 ########################################
 export WORKON_HOME="$HOME/.python_envs"
-export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
-source /usr/local/bin/virtualenvwrapper.sh
+
+if [[ "$(uname)" == 'Darwin' ]]; then
+  export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
+  source /usr/local/bin/virtualenvwrapper.sh
+elif [[ "$(uname)" == 'Linux' ]]; then
+  export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
+  source $HOME/.local/bin/virtualenvwrapper.sh
+fi
 
 alias de="deactivate"
 

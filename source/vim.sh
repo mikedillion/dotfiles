@@ -1,6 +1,10 @@
 export PATH="$PATH:/Applications/MacVim.app/Contents/bin/"
 
-alias vi="/usr/local/bin/vim"
+if [[ "$(uname)" == 'Darwin' ]]; then
+  alias vi="/usr/local/bin/vim"
+elif [[ "$(uname)" == 'Linux' ]]; then
+  alias vi="/usr/bin/vim"
+fi
 
 alias gi='vi' # fat fingers
 alias mvi='mvim' # MacVim
