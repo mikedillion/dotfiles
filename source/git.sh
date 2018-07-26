@@ -159,7 +159,9 @@ function gtag() {
 #
 
 # https://github.com/github/hub
-alias git='hub'
+if which hub >/dev/null; then
+  alias git='hub'
+fi
 
 # https://github.com/zaquestion/lab
 if which lab >/dev/null; then
