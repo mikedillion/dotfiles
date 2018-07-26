@@ -24,6 +24,10 @@
 # export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
 # export PYTHONPATH="$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH"
 
+if [[ "$(uname)" == 'Linux' ]]; then
+  export PATH="$HOME/.local/bin:$PATH"
+fi
+
 # virtualenv stuff
 ########################################
 export WORKON_HOME="$HOME/.python_envs"

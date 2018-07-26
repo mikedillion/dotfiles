@@ -162,7 +162,9 @@ function gtag() {
 alias git='hub'
 
 # https://github.com/zaquestion/lab
-alias git='lab'
+if which lab >/dev/null; then
+  alias git='lab'
+fi
 
 alias gap='git add --patch'
 alias gapg='git add --patch `gus`'
