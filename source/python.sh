@@ -5,13 +5,13 @@
 # |____/ \___/|_| |_|  \__|  _/ |\__,_|\__,_|\__, |\___(_)
 #                           |__/             |___/
 
-# export PYTHONSTARTUP="$HOME/.pythonrc"
+export PYTHONSTARTUP="$HOME/.pythonrc"
 
-# export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-# export PYTHONHOME="/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/"
-# export PYTHONHOME="/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7"
-# /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages
+# export PYTHONPATH="/usr/local/lib/python3.6/site-packages"
+# export PYTHONHOME="/usr/local/opt/python/Frameworks/Python.framework/Versions/3.6/"
+
 # export PYTHONPATH="/usr/local/lib/python3.7/site-packages"
+# export PYTHONHOME="/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/"
 
 # https://github.com/pyenv/pyenv
 # export PYENV_ROOT="$HOME/.pyenv"
@@ -20,9 +20,6 @@
 # if command -v pyenv 1>/dev/null 2>&1; then
 #   eval "$(pyenv init -)"
 # fi
-
-# export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
-# export PYTHONPATH="$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH"
 
 if [[ "$(uname)" == 'Linux' ]]; then
   export PATH="$HOME/.local/bin:$PATH"
