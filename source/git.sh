@@ -244,6 +244,10 @@ alias gcd='git_commit_diff'
 # Experimental
 ################################################################################
 
+# TODO which is better?
+# alias git_current_branch="git symbolic-ref --short HEAD"
+alias git_current_branch="git rev-parse --abbrev-ref HEAD"
+
 function 1off {
   export CURRENT_FEATURE="$@"
   echo "Starting work on '$CURRENT_FEATURE'"

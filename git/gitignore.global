@@ -8,4 +8,12 @@
 tags
 gems.tags
 
-mine
+mine/
+
+# Python
+requirements-miked.txt
+*.egg-info/
+*.pyc
+build/
+.pytest_cache/
+__pycache__/

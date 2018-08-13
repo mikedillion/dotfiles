@@ -1,7 +1,8 @@
-export PATH="$PATH:/Applications/MacVim.app/Contents/bin/"
 
 if [[ "$(uname)" == 'Darwin' ]]; then
-  alias vi="/usr/local/bin/vim"
+  export PATH="$PATH:/Applications/MacVim.app/Contents/bin/"
+  # alias vi="/usr/local/bin/vim"
+  alias vi="/Applications/MacVim.app/Contents/bin/vim"
 elif [[ "$(uname)" == 'Linux' ]]; then
   alias vi="/usr/bin/vim"
 fi
