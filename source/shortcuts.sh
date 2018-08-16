@@ -121,9 +121,7 @@ alias mou='open -a /Applications/Mou.app "$@"'
 alias macd='open -a /Applications/MacDown.app "$@"'
 
 alias jnv='open -a /Applications/Jupyter\ Notebook\ Viewer.app "$@"'
-
-# Uh, you'll have to make this 'latest' symlink yourself.
-alias oof='open -a /usr/local/Caskroom/openoffice/latest/OpenOffice.app/ "$@"'
+alias oof='open -a /Applications/OpenOffice.app "$@"'
 
 # My fingers have always thought that this should be a thing:
 alias chmox="chmod +x"
