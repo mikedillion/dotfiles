@@ -19,12 +19,6 @@ function remote_diff {
   diff <(ssh $1 "cat $2") <(ssh $3 "cat $4")
 }
 
-# SSH aliases
-alias s="ssh"
-alias ssh_cm="ln -sf ~/.ssh/config.cirrusmio ~/.ssh/config"
-alias ssh_cmp="ln -sf ~/.ssh/config.cirrusmio.pem ~/.ssh/config"
-alias ssh_p="ln -sf ~/.ssh/config.personal ~/.ssh/config"
-
 function j {
     if [[ $# > 0 ]]; then
         fg "$@"
