@@ -13,19 +13,19 @@
   showbranch = always
 
 [alias]
-	br = branch
-	ci = commit
-	cl = clone
-	co = checkout
-	di = diff
-	ls = status
-	pl = pull
-	pom = push origin master
-	pu = push
-	r = reset
-	rb = rebase
-	rl = reflog
-	st = status
+  br = branch
+  ci = commit
+  cl = clone
+  co = checkout
+  di = diff
+  ls = status
+  pl = pull
+  pom = push origin master
+  pu = push
+  r = reset
+  rb = rebase
+  rl = reflog
+  st = status
   ; https://git-scm.com/docs/pretty-formats
   ll = log --pretty=format:$'%ad \t %an \t %s' --date=relative --
   lf = log --format=fuller
@@ -55,8 +55,8 @@
 
 [credential]
   #helper = osxkeychain
-	helper = !aws codecommit credential-helper $@
-	UseHttpPath = true
+  helper = !aws codecommit credential-helper $@
+  UseHttpPath = true
 
 [hub]
   protocol = https
