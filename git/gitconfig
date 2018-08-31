@@ -52,8 +52,11 @@
 
 [commit]
   verbose = true
+
 [credential]
-  helper = osxkeychain
+  #helper = osxkeychain
+	helper = !aws codecommit credential-helper $@
+	UseHttpPath = true
 
 [hub]
   protocol = https
