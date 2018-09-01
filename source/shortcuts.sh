@@ -1,7 +1,7 @@
 alias d='diff'
 alias e='echo'
 alias c='cat'
-alias weechat='/usr/local/Cellar/weechat/0.4.0/bin/weechat-curses'
+alias weechat='/usr/local/Cellar/weechat/current/bin/weechat-curses'
 alias l='ll'
 alias ll='ls -alh'
 alias ls='ls -1'

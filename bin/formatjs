@@ -1,2 +1,2 @@
 #!/bin/sh
-java -cp /usr/local/Cellar/rhino/1.7R5/libexec/js.jar org.mozilla.javascript.tools.shell.Main ~/bin/beautify.js $*
+java -cp /usr/local/Cellar/rhino/current/libexec/js.jar org.mozilla.javascript.tools.shell.Main ~/bin/beautify.js $*
