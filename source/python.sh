@@ -115,8 +115,9 @@ function pipp() {
   if [ -f "requirements_dev.txt" ]; then
     pip install -r requirements_dev.txt
   fi
-  # https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs
-  pip install -e .
+  if [ -f "setup.py" ]; then
+    pip install -e .
+  fi
 }
 
 alias pipf="pip freeze"
