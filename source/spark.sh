@@ -15,7 +15,7 @@ elif [[ "$(uname)" == 'Linux' ]]; then
   export SPARK_MASTER_OPTS="-Dspark.deploy.defaultCores=5"
 fi
 
-export PATH="$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin"
+#export PATH="$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin"
 
 export PYSPARK_GATEWAY_SECRET=""
 export PYSPARK_GATEWAY_PORT="7707"
