@@ -95,11 +95,11 @@ function to_s {
 alias color='acoc'
 
 function findd {
-  find . -type d -iname "$@"
+  find . -type d -iname "*$@*"
 }
 
 function findf {
-  find . -type f -iname "$@"
+  find . -type f -iname "*$@*"
 }
 
 alias telnet_nyan='telnet nyancat.dakko.us'
