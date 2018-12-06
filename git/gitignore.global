@@ -17,3 +17,5 @@ requirements-miked.txt
 build/
 .pytest_cache/
 __pycache__/
+
+node_modules/
