@@ -134,3 +134,11 @@ alias dt="ddate"
 if [[ "$(uname)" == 'Linux' ]]; then
   alias ack="ack-grep"
 fi
+
+function sha256sum() {
+  shasum -a 256 "$@" ;
+}
+
+function sha512sum() {
+  shasum -a 512 "$@" ;
+}
