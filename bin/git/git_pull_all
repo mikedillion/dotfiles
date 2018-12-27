@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GIT_DIRS=`find . -type d -name ".git" | grep --color=never --only-matching '.*/'`
+GIT_DIRS=$(find . -type d -name ".git" | grep --color=never --only-matching '.*/')
 
 for folder in $GIT_DIRS; do
   CURRENT_BRANCH=$(git --git-dir="$folder.git" --work-tree="$folder" rev-parse --abbrev-ref HEAD)

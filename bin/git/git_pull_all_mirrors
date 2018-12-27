@@ -1,0 +1,8 @@
+#!/bin/bash
+
+GIT_DIRS=$(find . -type d -name "*\.git")
+
+for folder in $GIT_DIRS; do
+  echo ///// $folder
+  git --git-dir="$folder" remote update | grep -q -v 'Fetching origin'
+done
