@@ -118,3 +118,9 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[web]
+	browser = ch
+
+[browser "ch"]
+	cmd = open -a \"/Applications/Google Chrome.app\"
