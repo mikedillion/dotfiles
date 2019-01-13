@@ -80,12 +80,22 @@ function gcob {
   fi
 }
 
-function gciam {
+function gcim {
   if [[ $# > 0 ]]; then
-    git commit --all --message "$@"
+    git commit --message "$@" --signoff
   else
     red You just made a commit with an empty message:
-    git commit -a --allow-empty-message -m ''
+    git commit -a --allow-empty-message -m '' --signoff
+    git --no-pager show --minimal
+  fi
+}
+
+function gciam {
+  if [[ $# > 0 ]]; then
+    git commit --all --message "$@" --signoff
+  else
+    red You just made a commit with an empty message:
+    git commit -a --allow-empty-message -m '' --signoff
     git --no-pager show --minimal
   fi
 }
@@ -170,9 +180,6 @@ alias gap='git add --patch'
 alias gapg='git add --patch `gus`'
 alias gbr='git branch -vv'
 alias gbrs='git-branch-status'
-alias gci='git commit'
-alias gcia='git commit --all'
-alias gcim='git commit --message'
 alias gcl='git clone'
 alias gclm='git clone --mirror'
 alias gcls='git clone --depth 1'
