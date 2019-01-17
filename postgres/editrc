@@ -1,1 +1,11 @@
 bind "^R" em-inc-search-prev
+bind "\e[1~" ed-move-to-beg
+bind "\e[4~" ed-move-to-end
+bind "\e[3~" ed-delete-next-char
+bind "\e[2~" ed-quoted-insert
+bind "\e[1;5C" em-next-word
+bind "\e[1;5D" ed-prev-word
+bind "\e[5C" em-next-word
+bind "\e[5D" ed-prev-word
+bind "\e\e[C" em-next-word
+bind "\e\e[D" ed-prev-word
