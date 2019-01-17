@@ -59,8 +59,8 @@
 [credential "https://github.com"]
 	helper = osxkeychain
 
-[credential]
-	helper = !aws codecommit credential-helper $@
+[credential "https://git-codecommit.*.amazonaws.com"]
+	helper = !aws --profile $AWS_PROFILE codecommit credential-helper $@
 	UseHttpPath = true
 
 [hub]

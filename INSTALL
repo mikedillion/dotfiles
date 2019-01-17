@@ -16,3 +16,6 @@ mkdir -p $HOME/config
 ln -sf $HOME/dotfiles/config/matplotlib $HOME/config/matplotlib
 
 mkdir -p $HOME/.nvm
+
+ln -sf $HOME/dotfiles/postgres/psqlrc $HOME/.psqlrc
+ln -sf $HOME/dotfiles/postgres/editrc $HOME/.editrc
