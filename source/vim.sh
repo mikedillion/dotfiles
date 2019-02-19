@@ -7,9 +7,6 @@ elif [[ "$(uname)" == 'Linux' ]]; then
   alias vi="/usr/bin/vim"
 fi
 
-alias gi='vi' # fat fingers
-alias mvi='mvim' # MacVim
-
 alias vc=vimcat
 alias sp='vi -o' # open in horizontal splits
 alias vsp='vi -O' # open in vertical splits

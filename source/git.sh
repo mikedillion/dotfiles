@@ -241,6 +241,9 @@ alias vgut='vi -O $(gut)'
 alias gum='git ls-files --unmerged | awk "{print \$4}" | uniq' # list of unmerged
 alias vgum='vi -O $(gum)'
 
+alias gi='git ls-files --ignored | awk "{print \$4}" | uniq' # list of unmerged
+alias vgi='vi -O $(gi)'
+
 alias git_contrib='git shortlog -s -n'
 
 alias git_commit_diff='git log --left-right --graph --cherry-pick --oneline master..'
