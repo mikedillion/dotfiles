@@ -10,7 +10,8 @@ for folder in $GIT_DIRS; do
   echo "$CURRENT_BRANCH /////// $folder"
   if [ -n "$SHORT_STAT" ]; then
     echo "################################################################################"
-    tput setaf 1 && toilet --font smbraille --filter border $folder && tput reset
+    # tput setaf 1 && toilet --font smbraille --filter border $folder && tput reset
+    echo $folder
     echo "$SHORT_STAT"
     echo "################################################################################"
   fi
