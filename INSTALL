@@ -1,4 +1,6 @@
-ln -sf $HOME/dotfiles/bin $HOME/bin
+if [ ! -d "$HOME/bin" ]; then
+  ln -sf $HOME/dotfiles/bin $HOME/bin
+fi
 
 ln -sf $HOME/dotfiles/git/gitconfig $HOME/.gitconfig
 ln -sf $HOME/dotfiles/git/gitignore.global $HOME/.gitignore.global
@@ -14,7 +16,9 @@ ln -sf $HOME/dotfiles/config/lessfilter $HOME/.lessfilter
 ln -sf $HOME/dotfiles/config/yarnrc $HOME/.yarnrc
 
 mkdir -p $HOME/config
-ln -sf $HOME/dotfiles/config/matplotlib $HOME/config/matplotlib
+if [ ! -d "$HOME/config/matplotlib" ]; then
+  ln -sf $HOME/dotfiles/config/matplotlib $HOME/config/matplotlib
+fi
 
 mkdir -p $HOME/.nvm
 
