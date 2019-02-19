@@ -39,13 +39,13 @@ function parse_git_branch {
 
 function git-branch-by-date {
   for k in `git branch | sed s/^..//`; do
-    echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k --`\\t"$k";
+    echo -e `git log -1 --pretty=format:"%C%ci %C%cr%C" $k --`\\t"$k";
   done | sort
 }
 
 function git-branch-by-date-remote {
   for k in `git branch -r | sed s/^..//`; do
-    echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k --`\\t"$k";
+    echo -e `git log -1 --pretty=format:"%C%ci %C%cr%C" $k --`\\t"$k";
   done | sort
 }
 
