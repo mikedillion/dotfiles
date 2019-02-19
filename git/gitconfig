@@ -92,6 +92,9 @@
 # [difftool "bcomp"]
 #   cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE"
 #   trustExitCode = true
+# [difftool "sourcetree"]
+# 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+# 	path =
 
 # [merge]
 #   tool = bcomp
@@ -101,6 +104,9 @@
 # [mergetool "bcomp"]
 #   trustExitCode = true
 #   cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+# [mergetool "sourcetree"]
+# 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+# 	trustExitCode = true
 
 [filter "media"]
 	required = true
