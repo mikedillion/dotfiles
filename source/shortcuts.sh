@@ -113,6 +113,7 @@ alias mo='open -a /Applications/Markoff.app "$@"'
 alias mt='open -a /Applications/Mark\ Text.app "$@"'
 alias mou='open -a /Applications/Mou.app "$@"'
 alias macd='open -a /Applications/MacDown.app "$@"'
+alias twig='open -a /Applications/Twig.app "$@"'
 
 alias jnv='open -a /Applications/Jupyter\ Notebook\ Viewer.app "$@"'
 alias oof='open -a /Applications/OpenOffice.app "$@"'
