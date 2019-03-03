@@ -24,3 +24,13 @@ alias vagdel='rm -rf ~/.vagrant.d/data/machine-index/index*'
 #      source $HOME/dotvim/INSTALL
 #    CMD
 #  end
+
+# https://github.com/hashicorp/terraform
+export PATH=$PATH:/usr/local/terraform
+
+# https://github.com/hashicorp/otto
+export PATH=$PATH:/usr/local/otto
+
+# packer
+export PATH=$PATH:/usr/local/packer
+export PACKER_CACHE_DIR=$HOME/.packer

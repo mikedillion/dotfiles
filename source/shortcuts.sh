@@ -143,3 +143,5 @@ function sha256sum() {
 function sha512sum() {
   shasum -a 512 "$@" ;
 }
+
+alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/sbin/airport"
