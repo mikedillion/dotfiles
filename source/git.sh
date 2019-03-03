@@ -1,5 +1,5 @@
 # git completion
-source $HOME/bin/git/git-completion.bash
+# source $HOME/bin/git/git-completion.bash
 # complete -o default -o nospace -F _git_checkout gco
 
 #export GIT_EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim -fg '
