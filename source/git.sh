@@ -94,8 +94,8 @@ function gciam {
   if [[ $# > 0 ]]; then
     git commit --all --message "$@" --signoff
   else
+    git commit --all --allow-empty-message --message '' --signoff
     red You just made a commit with an empty message:
-    git commit -a --allow-empty-message -m '' --signoff
     git --no-pager show --minimal
   fi
 }
@@ -271,3 +271,5 @@ function 1done {
 }
 
 alias glb="gitlab_browse"
+
+alias gdf="git diff --name-only"

@@ -2,7 +2,7 @@ function vms(){
   echo "Running:"
   VBoxManage list runningvms
   echo "ALL VMs:"
-  VBoxManage list vms;
+  VBoxManage list vms | cut -d ' ' -f 1
 }
 
 function vmpo(){
