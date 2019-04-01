@@ -5,7 +5,7 @@
 	status = always
 	branch = always
 	ui = always
-	diff = always
+	diff = auto
 	interactive = always
 	grep = always
 	pager = true
