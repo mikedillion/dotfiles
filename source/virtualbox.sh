@@ -5,6 +5,14 @@ function vms(){
   VBoxManage list vms | cut -d ' ' -f 1
 }
 
+function vmp(){
+  VBoxManage controlvm "$@" pause
+}
+
+function vmr(){
+  VBoxManage controlvm "$@" resume
+}
+
 function vmpo(){
   VBoxManage controlvm "$@" poweroff
 }
