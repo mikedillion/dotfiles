@@ -14,14 +14,16 @@
 # export PYTHONHOME="/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/"
 
 # https://github.com/pyenv/pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+# if command -v pyenv 1>/dev/null 2>&1; then
+#   eval "$(pyenv init -)"
+# fi
 
-if [[ "$(uname)" == 'Linux' ]]; then
+if [[ "$(uname)" == 'Darwin' ]]; then
+  export PATH="$HOME/Library/Python/3.7/bin:$PATH"
+elif [[ "$(uname)" == 'Linux' ]]; then
   export PATH="$HOME/.local/bin:$PATH"
 fi
 
