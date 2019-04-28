@@ -1,42 +1,6 @@
 [include]
 	path = ~/dotfiles_private/git/gitconfig_private
 
-[color]
-	status = always
-	branch = always
-	ui = always
-	diff = auto
-	interactive = always
-	grep = always
-	pager = true
-	decorate = always
-	showbranch = always
-
-[alias]
-	br = branch
-	ci = commit
-	cl = clone
-	co = checkout
-	di = diff
-	ls = status
-	pl = pull
-	pom = push origin master
-	pu = push
-	r = reset
-	rb = rebase
-	rl = reflog
-	st = status
-	; https://git-scm.com/docs/pretty-formats
-	ll = log --pretty=format:$'%ad \t %an \t %s' --date=relative --
-	lf = log --format=fuller
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-	lag = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	blog = log --graph --simplify-by-decoration --pretty=format:'%d' --all
-	url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/github\\\\.com\\\\/\\\\1/g"'
-	ag = grep-with-smartcase -I --perl-regexp --break --heading --line-number
-	ack = grep-with-smartcase -I --perl-regexp --break --heading --line-number
-	dad = !curl https://icanhazdadjoke.com/ && git add
-
 [core]
 	pager = less
 	editor = vim
@@ -49,9 +13,28 @@
 
 [pull]
 	default = current
+	rebase = true
+
+[rebase]
+	autosquash = true
 
 [commit]
 	verbose = true
+
+[color]
+	status = always
+	branch = always
+	ui = always
+	diff = auto
+	interactive = always
+	grep = always
+	pager = true
+	decorate = always
+	showbranch = always
+
+[color "grep"]
+	linenumber = blue
+	filename = green bold
 
 [gpg]
 	program = gpg
@@ -65,10 +48,6 @@
 
 [hub]
 	protocol = https
-
-[color "grep"]
-	linenumber = blue
-	filename = green bold
 
 [diff]
 	tool = Kaleidoscope
@@ -113,12 +92,6 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 
-# Fix this so lfs doesn't barf
-# [filter "lfs"]
-#    clean = git-lfs clean -- %f
-#    smudge = git-lfs smudge -- %f
-#    process = git-lfs filter-process
-#    required = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -130,3 +103,28 @@
 
 [browser "ch"]
 	cmd = open -a \"/Applications/Google Chrome.app\"
+
+[alias]
+	br = branch
+	ci = commit
+	cl = clone
+	co = checkout
+	di = diff
+	ls = status
+	pl = pull
+	pom = push origin master
+	pu = push
+	r = reset
+	rb = rebase
+	rl = reflog
+	st = status
+	; https://git-scm.com/docs/pretty-formats
+	ll = log --pretty=format:$'%ad \t %an \t %s' --date=relative --
+	lf = log --format=fuller
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	lag = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	blog = log --graph --simplify-by-decoration --pretty=format:'%d' --all
+	url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/github\\\\.com\\\\/\\\\1/g"'
+	ag = grep-with-smartcase -I --perl-regexp --break --heading --line-number
+	ack = grep-with-smartcase -I --perl-regexp --break --heading --line-number
+	dad = !curl https://icanhazdadjoke.com/ && git add
