@@ -9,7 +9,6 @@ ln -sf $HOME/dotfiles/config/eaglerc $HOME/.eaglerc
 ln -sf $HOME/dotfiles/config/pythonrc $HOME/.pythonrc
 ln -sf $HOME/dotfiles/config/ctags $HOME/.ctags
 ln -sf $HOME/dotfiles/config/lessfilter $HOME/.lessfilter
-ln -sf $HOME/dotfiles/config/yarnrc $HOME/.yarnrc
 
 mkdir -p $HOME/config
 if [ ! -d "$HOME/config/matplotlib" ]; then
