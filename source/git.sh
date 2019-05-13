@@ -273,3 +273,4 @@ function 1done {
 alias glb="gitlab_browse"
 
 alias gdf="git diff --name-only"
+alias gspsp="git stash && git pull && git stash pop"
