@@ -4,5 +4,5 @@ export PATH="${RBENV_ROOT}/shims:$PATH"
 
 eval "$(rbenv init -)"
 
-# export PATH="$HOME/.gem/ruby/2.5.0/bin:$PATH"
-export PATH="$HOME/.gem/ruby/2.6.3/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.5.0/bin:$PATH"
+# export PATH="$HOME/.gem/ruby/2.6.3/bin:$PATH"
