@@ -145,3 +145,7 @@ function sha512sum() {
 }
 
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/sbin/airport"
+
+function jqp() {
+  pbpaste | jq '.'
+}
