@@ -53,6 +53,7 @@ alias pbc='pbcopy'
 alias pbp='pbpaste'
 
 # tired of typing this
+# 2019 update: I have no idea what this is for.
 function just {
   if [[ $# > 1 ]]; then
     LINES="$1"
