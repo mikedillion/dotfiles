@@ -1,8 +1,9 @@
 -- https://www.postgresql.org/docs/current/app-psql.html
+-- https://thoughtbot.com/blog/improving-the-command-line-postgres-experience
 
 \set PROMPT1 '%[%033[1;32;40m%]%M:%> %n@%/%[%033[0m%]% # '
 
-
 \set HISTSIZE 2000
 
+-- toggle expanded output
 \x auto

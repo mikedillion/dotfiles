@@ -131,7 +131,9 @@ ytadl() {
 alias vlc="/Applications/VLC.app/Contents/MacOS/VLC -I ncurses"
 
 alias ddate="date +%Y%m%d"
+alias logdate="date +%Y%m%dT%H%M%S"
 alias dt="ddate"
+alias dtt="logdate"
 
 if [[ "$(uname)" == 'Linux' ]]; then
   alias ack="ack-grep"
