@@ -5,3 +5,6 @@
 
 alias bd='boot2docker'
 alias dcr='docker'
+
+# So long GNU/BSD dc
+alias dc='docker-compose'
