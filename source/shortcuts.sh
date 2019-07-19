@@ -152,3 +152,8 @@ alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/C
 function jqp() {
   pbpaste | jq '.'
 }
+
+# Quick hd capacity. At least on simple macosx...
+function capa() {
+  df -h | head -n 2 | tail -n 1 | awk '{print $5}'
+}
