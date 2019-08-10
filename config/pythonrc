@@ -1,3 +1,6 @@
+import os
+import atexit
+
 try:
     import readline
 except ImportError:
@@ -7,18 +10,11 @@ else:
     readline.parse_and_bind("tab: complete")
     readline.parse_and_bind('''control-o:"    "''')
 
-import atexit
-import os
 
 history_path = os.path.join(os.path.expanduser("~"),'.pyhistory')
 
 def save_history(history_path=history_path):
-  import readline
   readline.write_history_file(history_path)
-
-if os.path.exists(history_path):
-  import readline
-  readline.read_history_file(history_path)
 
 atexit.register(save_history)
 
