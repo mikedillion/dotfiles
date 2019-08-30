@@ -95,7 +95,7 @@ selfie(){
 }
 
 # why not? you usually do ctrl-l anyways
-alias clear='clear; echo; echo; seq 1 $(tput cols) | gsort -R | spark | lolcat; echo; echo'
+# alias clear='clear; echo; echo; seq 1 $(tput cols) | gsort -R | spark | lolcat; echo; echo'
 
 function sine_wave() {
 
