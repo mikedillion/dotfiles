@@ -128,3 +128,10 @@ function man () {
 really () {
   readlink "$(command -v "$*")"
 }
+
+epub2mobi_all () {
+  # Shitty, but tired of typing this
+  while read epub; do
+    ebook-convert "$epub" "${epub.*}.mobi"
+  done < <(find . -type f -name "*.epub")
+}
