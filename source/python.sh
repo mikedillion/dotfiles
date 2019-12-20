@@ -22,7 +22,8 @@
 # fi
 
 if [[ "$(uname)" == 'Darwin' ]]; then
-  export PATH="$HOME/Library/Python/3.7/bin:$PATH"
+  # export PATH="$HOME/Library/Python/3.7/bin:$PATH"
+  export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
 elif [[ "$(uname)" == 'Linux' ]]; then
   export PATH="$HOME/.local/bin:$PATH"
 fi
@@ -52,14 +53,15 @@ alias lsvirtualenv="lsvirtualenv -b"
 #  fi
 #}
 
-# Make virtualenv and activate it
+# Make a virtual environment at the current location or tmux session
+# and activate it
 function mkvenv() {
   if [ $# -eq 0 ]; then
     # if [ -v TMUX ]; then # for bash > 4.2
     if [ -n "${TMUX+1}" ]; then
       env_name=$(tmux display-message -p '#S')
     else
-      env_name=$(basename $(pwd))
+      env_name=$(basename "$PWD")
     fi
   else
     env_name=$1

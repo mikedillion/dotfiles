@@ -156,3 +156,7 @@ function jqp() {
 function capa() {
   df -h | head -n 2 | tail -n 1 | awk '{print $5}'
 }
+
+function pbs() {
+  pbpaste | say --voice samantha
+}
