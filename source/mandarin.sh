@@ -5,8 +5,10 @@ tesseract_zh() {
 }
 
 docr() {
-  tesseract --tessdata-dir /usr/local/share/tessdata -l chi_sim "$HOME/Desktop/Screen\ *" stdout
+  tesseract --tessdata-dir /usr/local/share/tessdata -l chi_sim $HOME/Desktop/Screen\ * stdout
 }
+
+alias docr_trans="tesseract_zh $HOME/Desktop/Screen\ * | trans_zn_to_en"
 
 # https://github.com/soimort/translate-shell
 # Note: pipe stdin to these
@@ -25,5 +27,3 @@ pbzhen() {
 pbenzh() {
   pbpaste | trans :zh-cn
 }
-
-alias ocr_desktop="tesseract_zh $HOME/Desktop/Screen\ * | trans_zn_to_en"
