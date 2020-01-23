@@ -1,18 +1,37 @@
+# #############
+# # Tesseract #
+# #############
+#
 # https://github.com/tesseract-ocr/tessdata_best
 # https://github.com/tesseract-ocr/tesseract/wiki/Data-Files
+#
+# tesseract --list-langs
+#   List of available languages (5):
+#   chi_sim
+#   chi_sim_vert
+#
+# +-------+
+# | --psm |
+# +-------+
+#   See: tesseract --help-psm
+#   ...
+#     7    Treat the image as a single text line.
+#   ...
+
 tesseract_zh() {
-  tesseract --tessdata-dir /usr/local/share/tessdata -l chi_sim "$@" stdout
+  tesseract --psm 7 --tessdata-dir /usr/local/share/tessdata -l chi_sim "$@" stdout | tr -d ' '
 }
 
+
 docr() {
-  tesseract --tessdata-dir /usr/local/share/tessdata -l chi_sim $HOME/Desktop/Screen\ * stdout
+  tesseract_zh $HOME/Desktop/Screen\ *
 }
 
 alias docr_trans="tesseract_zh $HOME/Desktop/Screen\ * | trans_zn_to_en"
 
 # https://github.com/soimort/translate-shell
 # Note: pipe stdin to these
-trans_zn_to_en() {
+trans_zh_to_en() {
   trans -source zh-cn
 }
 
