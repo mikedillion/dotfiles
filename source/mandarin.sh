@@ -27,7 +27,7 @@ docr() {
   tesseract_zh $HOME/Desktop/Screen\ *
 }
 
-alias docr_trans="tesseract_zh $HOME/Desktop/Screen\ * | trans_zn_to_en"
+alias docr_trans="tesseract_zh $HOME/Desktop/Screen\ * | trans_zh_to_en"
 
 # https://github.com/soimort/translate-shell
 # Note: pipe stdin to these
@@ -41,8 +41,4 @@ trans_en_to_zh() {
 
 pbzhen() {
   pbpaste | trans -source zh-cn
-}
-
-pbenzh() {
-  pbpaste | trans :zh-cn
 }
