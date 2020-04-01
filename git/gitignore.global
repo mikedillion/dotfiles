@@ -18,4 +18,5 @@ build/
 .pytest_cache/
 __pycache__/
 
+# Node.js
 node_modules/

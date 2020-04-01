@@ -5,7 +5,7 @@
 # |____/ \___/|_| |_|  \__|  _/ |\__,_|\__,_|\__, |\___(_)
 #                           |__/             |___/
 
-# export PYTHONSTARTUP="$HOME/.pythonrc"
+export PYTHONSTARTUP="$HOME/.pythonrc"
 
 # export PYTHONPATH="/usr/local/lib/python3.6/site-packages"
 # export PYTHONHOME="/usr/local/opt/python/Frameworks/Python.framework/Versions/3.6/"

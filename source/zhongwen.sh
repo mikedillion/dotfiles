@@ -27,7 +27,7 @@ docr() {
   tesseract_zh $HOME/Desktop/Screen\ *
 }
 
-alias docr_trans="tesseract_zh $HOME/Desktop/Screen\ * | trans_zh_to_en"
+alias docr_trans="tesseract_zh $HOME/Desktop/Screen\ *.png | trans_zh_to_en"
 
 # https://github.com/soimort/translate-shell
 # Note: pipe stdin to these
