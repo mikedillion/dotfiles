@@ -22,8 +22,9 @@ export PYTHONSTARTUP="$HOME/.pythonrc"
 # fi
 
 if [[ "$(uname)" == 'Darwin' ]]; then
+  export PATH="/usr/local/opt/python/libexec/bin:$PATH"
   # export PATH="$HOME/Library/Python/3.7/bin:$PATH"
-  export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
+  # export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
 elif [[ "$(uname)" == 'Linux' ]]; then
   export PATH="$HOME/.local/bin:$PATH"
 fi
