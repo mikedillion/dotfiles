@@ -1,5 +1,5 @@
 [include]
-	path = ~/dotfiles_private/git/gitconfig_private
+	path = ~/dotfiles_private/git/config
 
 [core]
 	pager = less
