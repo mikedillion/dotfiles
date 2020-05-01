@@ -79,22 +79,6 @@ alias rainbow='yes "$(seq 1 255)" | while read i; do printf "\x1b[48;5;${i}m\n";
 alias snake_case="sed -E 's/[^A-Za-z]/_/g' | gsed -E 's/./\L&/g'"
 alias snake_paste="pbpaste | snake_case"
 
-# https://gist.github.com/kenkeiter/65be229609f4dc0d92cc
-# https://gist.github.com/beng/806b8420cc16bcf8a07a
-selfie(){
-  local selfie_archive_path="$HOME/selfie"
-  local datestamp=$(date +%y%m%d%H%M%S)
-  local filepath="$selfie_archive_path/$datestamp.png"
-
-  mkdir -p $selfie_archive_path   # make the selfie folder if it doesn't exist
-  imagesnap $filepath -w 1.0      # the -w flag gives the camera time to warm up
-  impbcopy $filepath            # copy the data for the image to the clipboard
-
-  local link=$(imguru -d $filepath 2>&1) # upload to Imgur
-  echo $link #| tee >(pbcopy)      # display the link and copy it to clipboard
-  echo "$datestamp,$filepath,$link" >> $selfie_archive_path/LOGFILE
-}
-
 # why not? you usually do ctrl-l anyways
 # alias clear='clear; echo; echo; seq 1 $(tput cols) | gsort -R | spark | lolcat; echo; echo'
 
