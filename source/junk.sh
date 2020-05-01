@@ -88,9 +88,10 @@ selfie(){
 
   mkdir -p $selfie_archive_path   # make the selfie folder if it doesn't exist
   imagesnap $filepath -w 1.0      # the -w flag gives the camera time to warm up
-  # impbcopy $filepath            # copy the data for the image to the clipboard
+  impbcopy $filepath            # copy the data for the image to the clipboard
+
   local link=$(imguru -d $filepath 2>&1) # upload to Imgur
-  echo $link | tee >(pbcopy)      # display the link and copy it to clipboard
+  echo $link #| tee >(pbcopy)      # display the link and copy it to clipboard
   echo "$datestamp,$filepath,$link" >> $selfie_archive_path/LOGFILE
 }
 
