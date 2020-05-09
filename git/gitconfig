@@ -87,7 +87,7 @@
 	# tool = sourcetree
 [mergetool]
 	prompt = false
-	keepBackup = false
+	 keepBackup = false
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
@@ -138,4 +138,4 @@
 	url = !bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/github\\\\.com\\\\/\\\\1/g"'
 	ag = grep-with-smartcase -I --perl-regexp --break --heading --line-number
 	ack = grep-with-smartcase -I --perl-regexp --break --heading --line-number
-	dad = !curl https://icanhazdadjoke.com
+	dad = !echo "$(curl --silent https://icanhazdadjoke.com/)" | fold -w 60 -s
