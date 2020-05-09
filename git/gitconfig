@@ -3,6 +3,7 @@
 
 [core]
 	pager = less
+	# pager = diff-so-fancy | less --tabs=4 -RFX
 	editor = vim
 	ignorecase = true
 	compression = 0
@@ -25,6 +26,7 @@
 	status = always
 	branch = always
 	ui = always
+	# ui = true
 	diff = auto
 	interactive = always
 	grep = always
@@ -35,6 +37,20 @@
 [color "grep"]
 	linenumber = blue
 	filename = green bold
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
 
 [gpg]
 	program = gpg
@@ -51,41 +67,36 @@
 
 [diff]
 	tool = Kaleidoscope
+	# tool = bcomp
+	# tool = sourcetree
 [difftool]
 	prompt = false
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
+[difftool "bcomp"]
+	cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE"
+	trustExitCode = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+
 [merge]
 	tool = Kaleidoscope
+	# tool = bcomp
+	# tool = sourcetree
 [mergetool]
 	prompt = false
+	keepBackup = false
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
-
-# [diff]
-#   tool = bcomp
-# [difftool]
-#   prompt = false
-# [difftool "bcomp"]
-#   cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE"
-#   trustExitCode = true
-# [difftool "sourcetree"]
-# 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-# 	path =
-
-# [merge]
-#   tool = bcomp
-# [mergetool]
-#   prompt = false
-#   keepBackup = false
-# [mergetool "bcomp"]
-#   trustExitCode = true
-#   cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
-# [mergetool "sourcetree"]
-# 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-# 	trustExitCode = true
+[mergetool "bcomp"]
+	trustExitCode = true
+	cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 
 [filter "media"]
 	required = true
@@ -118,13 +129,13 @@
 	rb = rebase
 	rl = reflog
 	st = status
-	; https://git-scm.com/docs/pretty-formats
+	# https://git-scm.com/docs/pretty-formats
 	ll = log --pretty=format:$'%ad \t %an \t %s' --date=relative --
 	lf = log --format=fuller
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	lag = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	blog = log --graph --simplify-by-decoration --pretty=format:'%d' --all
-	url =! bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/github\\\\.com\\\\/\\\\1/g"'
+	url = !bash -c 'git config --get remote.origin.url | sed -E "s/.+:\\(.+\\)\\.git$/https:\\\\/\\\\/github\\\\.com\\\\/\\\\1/g"'
 	ag = grep-with-smartcase -I --perl-regexp --break --heading --line-number
 	ack = grep-with-smartcase -I --perl-regexp --break --heading --line-number
-	dad = !curl https://icanhazdadjoke.com/ && git add
+	dad = !curl https://icanhazdadjoke.com
