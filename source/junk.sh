@@ -120,3 +120,7 @@ epub2mobi_all () {
     ebook-convert "$epub" "${epub.*}.mobi"
   done < <(find . -type f -name "*.epub")
 }
+
+tess() {
+  tesseract $HOME/Desktop/Screen\ *.png stdout
+}
