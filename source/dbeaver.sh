@@ -1,1 +1,1 @@
-export PATH="/Applications/DBeaver.app/Contents/MacOS:$PATH"
+export PATH="$PATH:/Applications/DBeaver.app/Contents/MacOS"

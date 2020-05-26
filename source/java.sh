@@ -17,9 +17,8 @@ fi
 
 # Apache Maven
 # export M2_HOME=/usr/local/apache-maven/apache-maven-3.2.3
-# export M2=$M2_HOME/bin
-# export PATH=$M2:$PATH
+# export PATH="$PATH:$M2_HOME/bin"
 
 # Apache Ant
-# export ANT_HOME=$PATH:/usr/local/ant
-# export PATH=$PATH:$ANT_HOME/bin
+# export ANT_HOME="/usr/local/ant"
+# export PATH="$PATH:$ANT_HOME/bin"
