@@ -44,3 +44,16 @@ trans_en_to_zh() {
 pbzhen() {
   pbpaste | trans -source zh-cn
 }
+
+pbzhen_all() {(
+  set -e
+  while read -r words; do
+    echo "$words" | trans -source zh-cn \
+      | gsed -n 1,4p \
+      | gawk 'NF>0' \
+      | gsed -r "s/[[:cntrl:]]\[[0-9]{1,3}m//g" \
+      | tr -d '[:punct:]' \
+      | tr '[:upper:]' '[:lower:]' \
+      | gsed ':a;N;$!ba;s/\n/\t：\t/g'
+  done < <(pbpaste)
+)}
