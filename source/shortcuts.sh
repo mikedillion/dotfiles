@@ -1,7 +1,7 @@
 alias weechat='/usr/local/Cellar/weechat/current/bin/weechat-curses'
 
-alias ll='ls -alh'
-alias ls='ls -1'
+alias ll="ls -alh"
+alias ls="ls -1 --color=auto"
 
 # alias fact="elinks -dump randomfunfacts.com | sed -n '/^| /p' | tr -d \|"
 
