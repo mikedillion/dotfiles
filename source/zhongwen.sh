@@ -18,10 +18,8 @@
 #     7    Treat the image as a single text line.
 #   ...
 
-export TESSDATA_PREFIX='/usr/local/share/tessdata'
-
 tesseract_zh() {
-  tesseract --psm 7 -l chi_sim "$@" stdout | tr -d ' '
+  TESSDATA_PREFIX='/usr/local/share/tessdata' tesseract --psm 7 -l chi_sim "$@" stdout | tr -d ' '
 }
 
 
@@ -45,15 +43,25 @@ pbzhen() {
   pbpaste | trans -source zh-cn
 }
 
+translate_and_format(){
+  echo "$1" | trans -source zh-cn \
+    | gsed -n 1,4p \
+    | gawk 'NF>0' \
+    | gsed -r "s/[[:cntrl:]]\[[0-9]{1,3}m//g" \
+    | tr -d '[:punct:]' \
+    | tr '[:upper:]' '[:lower:]' \
+    | gsed ':a;N;$!ba;s/\n/\t：\t/g'
+}
+
 pbzhen_all() {(
   set -e
-  while read -r words; do
-    echo "$words" | trans -source zh-cn \
-      | gsed -n 1,4p \
-      | gawk 'NF>0' \
-      | gsed -r "s/[[:cntrl:]]\[[0-9]{1,3}m//g" \
-      | tr -d '[:punct:]' \
-      | tr '[:upper:]' '[:lower:]' \
-      | gsed ':a;N;$!ba;s/\n/\t：\t/g'
+  while read -r word; do
+    translate_and_format "$word"
   done < <(pbpaste)
 )}
+
+pbzhen_words() {
+  while read -r word; do
+    translate_and_format "$word"
+  done < <(pbpaste | gsed -E 's/(.)/\1\n/g' | gawk 'NF>0')
+}
