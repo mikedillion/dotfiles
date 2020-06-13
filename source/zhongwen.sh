@@ -48,8 +48,8 @@ translate_and_format(){
     | gsed -n 1,4p \
     | gawk 'NF>0' \
     | gsed -r "s/[[:cntrl:]]\[[0-9]{1,3}m//g" \
-    | tr -d '[:punct:]' \
-    | tr '[:upper:]' '[:lower:]' \
+    | /usr/bin/tr -d '[:punct:]' \
+    | /usr/bin/tr '[:upper:]' '[:lower:]' \
     | gsed ':a;N;$!ba;s/\n/\t：\t/g'
 }
 
