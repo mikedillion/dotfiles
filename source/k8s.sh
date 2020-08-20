@@ -9,5 +9,5 @@ k8s_admin_token() {
 }
 
 k8s_current_ns() {
-	echo "$(kubectl config view --minify --output 'jsonpath={..namespace}')"
+	kubectl config view --minify --output 'jsonpath={..namespace}'
 }
