@@ -18,8 +18,10 @@
 #     7    Treat the image as a single text line.
 #   ...
 
+export TESSDATA_PREFIX="/usr/local/share/tessdata"
+
 tesseract_zh() {
-  TESSDATA_PREFIX='/usr/local/share/tessdata' tesseract --psm 7 -l chi_sim "$@" stdout | tr -d ' '
+  tesseract --psm 7 -l chi_sim "$@" stdout | tr -d ' '
 }
 
 
