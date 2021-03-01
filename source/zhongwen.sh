@@ -19,11 +19,18 @@
 #   ...
 
 export TESSDATA_PREFIX="/usr/local/share/tessdata"
+export TESSDATA_LANG="chi_sim"
+
+# Also:
+#   eng
+#   chi_sim
+#   chi_sim_vert
+#   chi_tra
+#   chi_tra_vert
 
 tesseract_zh() {
   tesseract --psm 7 -l chi_sim "$@" stdout | tr -d ' '
 }
-
 
 docr() {
   tesseract_zh $HOME/Desktop/Screen\ *

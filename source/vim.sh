@@ -1,15 +1,15 @@
-if [[ "$(uname)" == 'Darwin' ]]; then
-  # alias vim="/usr/local/Cellar/vim/latest/bin/vim"
+# if [[ "$(uname)" == 'Darwin' ]]; then
+#   # alias vim="/usr/local/Cellar/vim/latest/bin/vim"
 
-  # alias vi="/usr/bin/vim"
-  # alias vi="/usr/local/bin/vim"
+#   # alias vi="/usr/bin/vim"
+#   # alias vi="/usr/local/bin/vim"
 
-  alias vi="/Applications/MacVim.app/Contents/bin/vim"
-  alias vim="/Applications/MacVim.app/Contents/bin/vim"
-  export PATH="$PATH:/Applications/MacVim.app/Contents/bin/"
-elif [[ "$(uname)" == 'Linux' ]]; then
-  alias vi="/usr/bin/vim"
-fi
+#   # alias vi="/Applications/MacVim.app/Contents/bin/vim"
+#   # alias vim="/Applications/MacVim.app/Contents/bin/vim"
+#   # export PATH="$PATH:/Applications/MacVim.app/Contents/bin/"
+# elif [[ "$(uname)" == 'Linux' ]]; then
+#   alias vi="/usr/bin/vim"
+# fi
 
 alias vi=vim
 
