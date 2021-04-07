@@ -1,6 +1,9 @@
 [include]
 	path = ~/dotfiles_private/git/config
 
+[init]
+	defaultBranch = main
+
 [core]
 	pager = less
 	# pager = diff-so-fancy | less --tabs=4 -RFX
@@ -140,5 +143,3 @@
 	ag = grep-with-smartcase -I --perl-regexp --break --heading --line-number
 	ack = grep-with-smartcase -I --perl-regexp --break --heading --line-number
 	dad = !echo "$(curl --silent https://icanhazdadjoke.com/)" | fold -w 60 -s
-[init]
-	defaultBranch = main
