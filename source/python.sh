@@ -22,7 +22,11 @@ export PYTHONSTARTUP="$HOME/.pythonrc"
 # fi
 
 if [[ "$(uname)" == 'Darwin' ]]; then
-  export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+  export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+  export LDFLAGS="-L/usr/local/opt/python@3.8/lib"
+  export PKG_CONFIG_PATH="/usr/local/opt/python@3.8/lib/pkgconfig"
+
+  # export PATH="/usr/local/opt/python/libexec/bin:$PATH"
   # export PATH="$HOME/Library/Python/3.7/bin:$PATH"
   # export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
 elif [[ "$(uname)" == 'Linux' ]]; then
@@ -34,7 +38,7 @@ fi
 export WORKON_HOME="$HOME/.python_envs"
 
 if [[ "$(uname)" == 'Darwin' ]]; then
-  export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
+  export VIRTUALENVWRAPPER_PYTHON="/usr/local/opt/python@3.8/bin/python3"
   source /usr/local/bin/virtualenvwrapper.sh
 elif [[ "$(uname)" == 'Linux' ]]; then
   export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"

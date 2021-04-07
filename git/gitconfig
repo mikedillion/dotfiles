@@ -67,6 +67,7 @@
 
 [diff]
 	tool = Kaleidoscope
+	colorMoved = zebra
 	# tool = bcomp
 	# tool = sourcetree
 [difftool]
@@ -139,3 +140,5 @@
 	ag = grep-with-smartcase -I --perl-regexp --break --heading --line-number
 	ack = grep-with-smartcase -I --perl-regexp --break --heading --line-number
 	dad = !echo "$(curl --silent https://icanhazdadjoke.com/)" | fold -w 60 -s
+[init]
+	defaultBranch = main
