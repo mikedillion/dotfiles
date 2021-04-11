@@ -20,6 +20,8 @@ alias vip='vi -p' # open in tabs
 
 alias vdi='vimdiff'
 
+alias mvim='/Applications/MacVim.app/Contents/bin/mvim'
+
 #function vi {
 #  if jobs | grep -i vim; then
 #    toilet --font=smbraille "Foregrounding current session"
