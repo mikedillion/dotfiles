@@ -5,6 +5,7 @@
 	defaultBranch = main
 
 [core]
+  # pager = delta
 	pager = less
 	# pager = diff-so-fancy | less --tabs=4 -RFX
 	editor = vim
@@ -84,6 +85,31 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
+
+[delta]
+	plus-style = "syntax #012800"
+	minus-style = "syntax #340001"
+	syntax-theme = Monokai Extended
+	features = side-by-side line-numbers decorations
+	navigate = true
+	line-numbers = true
+	zero-style = dim syntax
+	whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
+	hunk-header-decoration-style = cyan box ul
+
+[delta "line-numbers"]
+	line-numbers-left-style = cyan
+	line-numbers-right-style = cyan
+	line-numbers-minus-style = 124
+	line-numbers-plus-style = 28
+
+[interactive]
+	diffFilter = delta --color-only
 
 [merge]
 	tool = Kaleidoscope
