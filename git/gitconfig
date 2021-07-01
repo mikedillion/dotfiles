@@ -108,8 +108,8 @@
 	line-numbers-minus-style = 124
 	line-numbers-plus-style = 28
 
-[interactive]
-	diffFilter = delta --color-only
+; [interactive]
+;   diffFilter = delta --color-only
 
 [merge]
 	tool = Kaleidoscope
